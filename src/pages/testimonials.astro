@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Testimonials | Woodstyle Joinery"
+  description="What our customers say about Woodstyle Joinery craftsmanship and service."
+>
+  <!-- Hero -->
+  <section class="bg-primary-custom text-white text-center py-5 mb-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Testimonials</h1>
+      <p class="lead mx-auto" style="max-width: 720px">
+        Words from customers who trusted Woodstyle Joinery with their homes
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="container pb-5">
+    <div class="row g-5">
+
+      <!-- Testimonial -->
+      <div class="col-md-6">
+        <article class="testimonial-card">
+          <h3>Summerhouse</h3>
+          <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+            To Alan and the team, thanks very much for a great job done on our
+            summerhouse. It looks great – just shame about the weather!
+            <span class="d-block mt-2 fw-semibold">— Paul & Michelle</span>
+          </blockquote>
+        </article>
+      </div>
+
+      <div class="col-md-6">
+        <article class="testimonial-card">
+          <h3>Wood Stores</h3>
+          <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+            Thank you for making the wood stores so quickly for us.
+            <span class="d-block mt-2 fw-semibold">— Phillipa</span>
+          </blockquote>
+        </article>
+      </div>
+
+      <div class="col-md-6">
+        <article class="testimonial-card">
+          <h3>Bespoke Joinery</h3>
+          <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+            To Alan, thank you for putting up with me and all my demands — but I’m
+            sure you’ll agree now it’s finished, it looks great! I love it.
+            <span class="d-block mt-2 fw-semibold">— Angela</span>
+          </blockquote>
+        </article>
+      </div>
+
+      <!-- Image Testimonial -->
+      <div class="col-md-6">
+        <article class="testimonial-card testimonial-with-image">
+          <div class="testimonial-grid">
+            <img
+              src="/images/testimonials/cornwall-log-store.jpg"
+              alt="Cornwall Log Store by Woodstyle Joinery"
+              class="testimonial-image"
+            />
+
+            <div>
+              <h3>Cornwall Log Store</h3>
+              <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+                We have a house in Cornwall and I used Woodstyle because of the
+                design. I particularly liked the oak front and tiled roof. The
+                young person who came to construct it was charming, hardworking,
+                and very tidy. I have no hesitation in recommending both the
+                product and the service — they are excellent.
+                <span class="d-block mt-2 fw-semibold">— Alan</span>
+              </blockquote>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6">
+        <article class="testimonial-card">
+          <h3>Woodland Log Shed</h3>
+          <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+            Thank you so much for moving the log shed into the wood for us. The
+            house is sold now. We hope to build opposite and will definitely
+            come back to you.
+            <span class="d-block mt-2 fw-semibold">— Sue</span>
+          </blockquote>
+        </article>
+      </div>
+
+      <div class="col-md-6">
+        <article class="testimonial-card">
+          <h3>Oak Log Store & Conservatory</h3>
+          <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
+            Our initial purchase was an oak log store, which was beautifully made
+            and much admired. Over the years, Woodstyle has completed several
+            projects for us, including replacing our conservatory with a
+            traditional oak frame and slate roof. The result is a stunning,
+            comfortable space we can use all year round. We cannot speak highly
+            enough of the quality, efficiency, and courtesy throughout.
+            <span class="d-block mt-2 fw-semibold">— Peter</span>
+          </blockquote>
+        </article>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  height: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-card h3 {
+  font-weight: 700;
+  color: #2f3e34;
+}
+
+.testimonial-with-image {
+  padding: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-image {
+    height: 220px;
+  }
+}
+</style>

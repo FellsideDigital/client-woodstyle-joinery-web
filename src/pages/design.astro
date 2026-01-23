@@ -1,0 +1,52 @@
+---
+// src/pages/design-services.astro
+import Layout from '../layouts/Layout.astro';
+import DesignServicesCarousel from '../components/DesignServicesCarousel.astro';
+
+const title = "Design Services";
+const description = "We use the latest CAD software to plan your joinery project and create drawings for your approval before manufacture goes ahead. Our experience in designing for home and garden optimizes your space while keeping the process simple and exciting.";
+---
+
+<Layout title={title} description={description}>
+
+  <!-- Hero Section -->
+  <section class="bg-primary-custom text-white text-center py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-5 fw-bold">{title}</h1>
+      <p class="lead mx-auto" style="max-width: 720px">{description}</p>
+    </div>
+  </section>
+
+  <!-- Text Section -->
+  <section class="container py-5">
+    <h2 class="fw-bold text-primary-custom mb-4">Design Service</h2>
+    <p class="fs-5 mb-3">
+      We use the latest CAD software to plan your joinery project and create drawings for your approval before manufacture goes ahead. Throughout the design process, alterations and additions can be easily added whilst maintaining accuracy, which is crucial to producing a quality finish.
+    </p>
+    <p class="fs-5 mb-3">
+      Our experience in designing for the home and garden optimizes the space available; whether that is clever storage solutions such as wardrobes, cupboards and closets or a garden structure that compliments the existing landscape and features. Designs can be communicated and amended back and forth via email at a time that suits you so that the designing of your bespoke project can be of minimum inconvenience and instead the exciting experience it is supposed to be of creating something as unique as you are!
+    </p>
+    <p class="fs-5 mb-3">
+      Please don't hesitate to give us a call if you would like to discuss an idea or enquire about a quote.
+    </p>
+    <p class="fs-5 mb-3">
+      Look forward to hearing from you.<br/>
+      <strong>The Woodstyle Team</strong>
+    </p>
+  </section>
+
+  <!-- Carousel Section -->
+  <section class="container py-5">
+    <DesignServicesCarousel />
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center py-5 bg-light">
+    <div class="container">
+      <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
+        Contact Us About Your Design
+      </a>
+    </div>
+  </section>
+
+</Layout>

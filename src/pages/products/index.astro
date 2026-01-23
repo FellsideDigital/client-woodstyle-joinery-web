@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/Layout.astro';
+
+const title = "Our Products";
+const description = "Explore our full range of bespoke joinery products for your home and garden.";
+
+const products = [
+  {
+    title: "Bespoke Kitchens",
+    href: "/products/kitchens",
+    image: "/images/products/kitchen/kitchen_6.jpg",
+    alt: "Bespoke Kitchens"
+  },
+  {
+    title: "Bedrooms & Dressing Rooms",
+    href: "/products/bedrooms",
+    image: "/images/products/bedrooms/bedroom_1.jpg",
+    alt: "Bedrooms and Dressing Rooms"
+  },
+  {
+    title: "Garages & Workshops",
+    href: "/products/garages",
+    image: "/images/products/garages/garage_14.jpg",
+    alt: "Garages and Workshops"
+  },
+  {
+    title: "Conservatories & Orangeries",
+    href: "/products/conservatories",
+    image: "/images/products/conservatories/conservatory_1.jpg",
+    alt: "Conservatories and Orangeries"
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+
+  <!-- Hero Section -->
+  <section class="bg-primary-custom text-white text-center py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-5 fw-bold">{title}</h1>
+      <p class="lead mx-auto" style="max-width: 720px">{description}</p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="bg-white">
+    <div class="container py-5">
+      <div class="row g-4">
+        {products.map(product => (
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <a href={product.href} class="text-decoration-none">
+              <div class="product-card rounded shadow-sm position-relative overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.alt}
+                  class="img-fluid"
+                />
+                <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+                <div class="card-text position-absolute bottom-0 start-0 w-100 p-3 text-white">
+                  <h5 class="fw-bold">{product.title}</h5>
+                  <span>View Gallery →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .product-card {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .product-card .overlay {
+      background: rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
+    .product-card:hover .overlay {
+      background: rgba(0,0,0,0.25);
+    }
+    .card-text h5 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .card-text span {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+  </style>
+
+</BaseLayout>

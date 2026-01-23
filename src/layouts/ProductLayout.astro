@@ -1,0 +1,33 @@
+---
+import Layout from "./Layout.astro";
+import ImageGallery from "../components/ImageGallery.astro";
+
+const { title, description, images } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <section class="container py-5">
+    <h1 class="fw-bold text-primary-custom mb-4">{title}</h1>
+    <p class="fs-5 mb-5">{description}</p>
+
+    <slot />
+
+    <div class="gallery-wrapper mb-4">
+      <ImageGallery images={images} />
+    </div>
+
+    <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold mt-4">
+      Contact Us About {title}
+    </a>
+  </section>
+</Layout>
+
+<style>
+/* Wrap the gallery and align left */
+.gallery-wrapper {
+  display: flex;
+  justify-content: flex-start; 
+  margin: 0 auto 20px 0;        
+  max-width: 640px;           
+}
+</style>

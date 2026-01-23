@@ -1,0 +1,45 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Kitchens";
+const description = "Bespoke kitchens designed to maximize space, functionality, and style. Modern, traditional, and farmhouse styles available.";
+
+const images = [
+  { src: "/images/products/kitchen/kitchen_1.jpg", alt: "Modern oak kitchen cabinets", caption: "Modern Oak Cabinets" },
+  { src: "/images/products/kitchen/kitchen_2.jpg", alt: "Kitchen with large farmhouse sink", caption: "Farmhouse Sink Kitchen" },
+  { src: "/images/products/kitchen/kitchen_3.jpg", alt: "Custom marble kitchen island", caption: "Marble Kitchen Island" },
+  { src: "/images/products/kitchen/kitchen_4.jpg", alt: "Sleek contemporary kitchen design", caption: "Contemporary Kitchen" },
+  { src: "/images/products/kitchen/kitchen_5.jpg", alt: "Traditional shaker style kitchen", caption: "Shaker Style Kitchen" },
+  { src: "/images/products/kitchen/kitchen_6.jpg", alt: "Kitchen with clever storage solutions", caption: "Smart Storage Kitchen" },
+  { src: "/images/products/kitchen/kitchen_7.jpg", alt: "Rustic farmhouse kitchen with wooden beams", caption: "Rustic Farmhouse Kitchen" },
+  { src: "/images/products/kitchen/kitchen_8.jpg", alt: "Custom cabinetry with handleless doors", caption: "Handleless Custom Cabinets" },
+  { src: "/images/products/kitchen/kitchen_9.jpg", alt: "Kitchen with central breakfast bar", caption: "Breakfast Bar Kitchen" },
+  { src: "/images/products/kitchen/kitchen_10.jpg", alt: "Minimalist white modern kitchen", caption: "Minimalist White Kitchen" },
+  { src: "/images/products/kitchen/kitchen_11.jpg", alt: "Open-plan kitchen with island", caption: "Open-Plan Kitchen" },
+  { src: "/images/products/kitchen/kitchen_12.jpg", alt: "Kitchen with integrated appliances", caption: "Integrated Appliances Kitchen" },
+  { src: "/images/products/kitchen/kitchen_13.jpg", alt: "Luxury kitchen with pendant lighting", caption: "Luxury Kitchen Lighting" },
+  { src: "/images/products/kitchen/kitchen_15.jpg", alt: "Kitchen with bespoke cabinetry and island", caption: "Bespoke Kitchen Island" },
+  { src: "/images/products/kitchen/kitchen_14.jpg", alt: "Traditional kitchen with wooden accents", caption: "Classic Wooden Kitchen" },
+];
+---
+
+<ProductLayout {title} {description} {images}>
+  <div class="fs-5">
+    <p>Kitchens are the heart of any home. A well-designed kitchen maximizes space, combines functionality with style, and provides a comfortable space to cook and entertain. Our bespoke kitchens are crafted to suit both modern and traditional tastes, tailored perfectly to your home.</p>
+
+    <p>Farmhouse and shaker kitchens remain popular for a timeless, classic feel. Our custom kitchen islands are designed for easy cleaning, practicality, and enhanced storage. Every cupboard and drawer is designed to make the most of your space, from plates and pans to appliances and gadgets.</p>
+
+    <p>Whether you prefer a rustic farmhouse style, a sleek modern design, or a combination of both, our team will bring your dream kitchen to life. Contact us on <strong>01228 512303</strong> to discuss your ideal layout and design.</p>
+
+    <h3 class="mt-5">Gallery of Our Work</h3>
+    <p>Take a look at some of our completed kitchens, islands, and storage solutions below.</p>
+
+    <ul class="mb-4">
+      <li>Modern, traditional, and farmhouse kitchens</li>
+      <li>Custom kitchen islands for functionality and style</li>
+      <li>Optimized storage solutions for plates, pans, and appliances</li>
+      <li>High-quality bespoke cabinetry tailored to your home</li>
+      <li>Designs that maximize space while maintaining aesthetic appeal</li>
+    </ul>
+  </div>
+</ProductLayout>

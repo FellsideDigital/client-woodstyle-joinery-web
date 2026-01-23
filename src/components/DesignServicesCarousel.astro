@@ -1,0 +1,129 @@
+---
+// src/components/DesignServicesCarousel.astro
+---
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* LEFT: IMAGES */
+.slides {
+  position: relative;
+  width: 600px;
+  height: 420px;
+}
+
+.slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  border-radius: 0.75rem;
+}
+
+.slides img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* RIGHT: TEXT LIST */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  font-family: Lora, serif;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: #8a8f8c;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #556956;
+  transform: translateX(6px);
+}
+
+.nav-link.active {
+  color: #1c1e1f;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .carousel {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .slides {
+    width: 100%;
+    height: 360px;
+  }
+
+  .nav-link {
+    font-size: 1.6rem;
+  }
+}
+</style>
+
+<div class="carousel">
+  <div class="slides">
+    <img
+      src="/images/design/kitchen-design.jpg"
+      alt="New Kitchens"
+      class="active"
+    />
+    <img
+      src="/images/design/garden-furniture-design.jpg"
+      alt="Garden Furniture"
+    />
+    <img
+      src="/images/design/garage-design.jpg"
+      alt="Garage Design"
+    />
+  </div>
+
+  <ul class="nav-links">
+    <li class="nav-link active" data-index="0">
+      New Kitchens or Replacements
+    </li>
+    <li class="nav-link" data-index="1">
+      Garden Furniture Design
+    </li>
+    <li class="nav-link" data-index="2">
+      Garage Design
+    </li>
+  </ul>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.carousel .slides img');
+const navLinks = document.querySelectorAll('.carousel .nav-link');
+
+navLinks.forEach((link, index) => {
+  link.addEventListener('click', () => {
+    slides.forEach(slide => slide.classList.remove('active'));
+    navLinks.forEach(nav => nav.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    link.classList.add('active');
+  });
+});
+</script>

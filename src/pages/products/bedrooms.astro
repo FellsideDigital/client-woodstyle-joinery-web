@@ -1,0 +1,36 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bedrooms and Dressing Rooms";
+const description = "Luxury, contemporary fitted bedrooms and dressing rooms with bespoke joinery, storage solutions, and furniture crafted for your home.";
+
+const images = [
+  { src: "/images/products/bedrooms/bedroom_1.jpg", alt: "Master bedroom with luxury fitted wardrobe", caption: "Luxury Master Bedroom" },
+  { src: "/images/products/bedrooms/bedroom_2.jpg", alt: "Children's bedroom with custom storage", caption: "Children's Bedroom with Storage" },
+  { src: "/images/products/bedrooms/bedroom_3.jpg", alt: "Spacious dressing room with island", caption: "Elegant Dressing Room" },
+  { src: "/images/products/bedrooms/bedroom_4.jpg", alt: "Bedroom with built-in media and TV solutions", caption: "Bedroom Media Setup" },
+  { src: "/images/products/bedrooms/bedroom_5.jpg", alt: "Contemporary fitted bedroom with neutral tones", caption: "Contemporary Fitted Bedroom" },
+  { src: "/images/products/bedrooms/bedroom_6.jpg", alt: "Classic bedroom with bespoke cabinetry", caption: "Classic Fitted Bedroom" },
+  { src: "/images/products/bedrooms/bedroom_7.jpg", alt: "Bedroom with built-in shelves and desk area", caption: "Functional Fitted Bedroom" },
+  { src: "/images/products/bedrooms/bedroom_8.jpg", alt: "Luxury bedroom with integrated lighting", caption: "Luxury Fitted Bedroom" },
+];
+---
+
+<ProductLayout {title} {description} {images}>
+  <div class="fs-5">
+    <p>If you can't unwind in your own bedroom, where can you? The space around us where we sleep is important. That's why we make luxury, contemporary, quality fitted bedrooms with a huge choice of cupboards and storage ideas—even for children's bedrooms. Our joinery is second to none, and we can build your dream bedroom and furniture, with ideas ranging from small bedrooms to master bedrooms and everything in between.</p>
+
+    <p>Our bespoke fitted bedrooms are designed to enhance your home's Feng Shui and functionality. For advice or a consultation, contact us on <strong>01228 512303</strong> about Bedrooms and Dressing Rooms.</p>
+
+    <h3 class="mt-5">Gallery of Our Work</h3>
+    <p>Here are some photos of bedrooms and dressing rooms we are proud to have worked on.</p>
+
+    <ul class="mb-4">
+      <li>Bedrooms for adults and children</li>
+      <li>Dressing rooms with custom storage solutions</li>
+      <li>Creative media solutions integrated into bedrooms</li>
+      <li>Custom furniture tailored to your space</li>
+    </ul>
+
+  </div>
+</ProductLayout>

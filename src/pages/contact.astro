@@ -1,0 +1,99 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+
+const title = "Contact Woodstyle Joinery";
+const description = "Get in touch with Woodstyle Joinery for bespoke joinery projects across Cumbria.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="bg-primary-custom text-white text-center py-5 mb-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-3">{title}</h1>
+      <p class="lead mb-0">{description}</p>
+    </div>
+  </section>
+
+  <section class="container mb-5">
+    <div class="row g-5 align-items-start">
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <div class="p-4 bg-light rounded shadow-sm h-100">
+          <h5 class="fw-bold text-primary-custom mb-4">Our Details</h5>
+          <p class="mb-3">
+            <i data-feather="phone" class="me-2 text-primary-custom"></i>
+            <a href="tel:01228512303" class="text-decoration-none text-dark">01228 512303</a>
+          </p>
+          <p class="mb-3">
+            <i data-feather="mail" class="me-2 text-primary-custom"></i>
+            <a href="mailto:info@woodstylejoinery.co.uk" class="text-decoration-none text-dark">info@woodstylejoinery.co.uk</a>
+          </p>
+          <p class="mb-0 d-flex align-items-start">
+            <i data-feather="map-pin" class="me-2 text-primary-custom mt-1"></i>
+            <span>
+              Wood Bank Farm, Brisco<br />
+              Carlisle, Cumbria<br />
+              United Kingdom, CA4 0QP
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-8">
+        <form class="p-5 border rounded shadow-sm bg-white" action="https://formspree.io/f/maypnvja" method="POST">
+          <h5 class="fw-bold text-primary-custom mb-4">Send Us a Message</h5>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-secondary-custom btn-lg fw-bold">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section class="mb-5">
+    <div class="container rounded overflow-hidden shadow-sm">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9184.100506198445!2d-2.9058588!3d54.8673699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb434ee10cfa99758!2sWoodstyle%20Joinery!5e0!3m2!1sen!2suk!4v1573475225953!5m2!1sen!2suk"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+    <section class="bg-primary-custom text-white text-center py-5">
+      <div class="container py-5">
+      <h2 class="fw-bold mb-4">Ready to Discuss Your Project?</h2>
+      <p class="lead mb-4">Call us or send a message today, and let's bring your dream build to life!</p>
+      <a href="tel:01228512303" class="btn btn-light btn-lg fw-bold me-3">
+        <i data-feather="phone" class="me-2"></i> Call 01228 512303
+      </a>
+      <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
+        Send a Message
+      </a>
+    </div>
+  </section>
+
+  <script>
+    feather.replace();
+  </script>
+</Layout>

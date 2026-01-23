@@ -1,0 +1,44 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Garages and Workshops";
+const description = "Custom-built garages and workshops designed for cars, hobbies, and storage. Durable oak frame constructions tailored to your needs.";
+
+const images = [
+  { src: "/images/products/garages/garage_1.jpg", alt: "Double garage with timber frame", caption: "Double Garage" },
+  { src: "/images/products/garages/garage_2.jpg", alt: "Workshop with built-in storage units", caption: "Workshop with Storage" },
+  { src: "/images/products/garages/garage_3.jpg", alt: "Oak framed single garage", caption: "Oak Framed Garage" },
+  { src: "/images/products/garages/garage_4.jpg", alt: "Garage with attached log store", caption: "Garage with Log Store" },
+  { src: "/images/products/garages/garage_5.jpg", alt: "Standalone garden workshop", caption: "Garden Workshop" },
+  { src: "/images/products/garages/garage_6.jpg", alt: "Garage with mezzanine storage", caption: "Garage with Mezzanine Storage" },
+  { src: "/images/products/garages/garage_7.jpg", alt: "Double garage with carport", caption: "Garage with Carport" },
+  { src: "/images/products/garages/garage_8.jpg", alt: "Workshop with natural light windows", caption: "Workshop with Skylights" },
+  { src: "/images/products/garages/garage_9.jpg", alt: "Garage with integrated tool storage", caption: "Tool Storage Garage" },
+  { src: "/images/products/garages/garage_10.jpg", alt: "Classic wooden garage for vintage cars", caption: "Garage for Classic Cars" },
+  { src: "/images/products/garages/garage_11.jpg", alt: "Garage with workshop extension", caption: "Extended Workshop Garage" },
+  { src: "/images/products/garages/garage_12.jpg", alt: "Garage with timber cladding and double doors", caption: "Timber Clad Garage" },
+  { src: "/images/products/garages/garage_13.jpg", alt: "Garage with integrated log and bike storage", caption: "Garage with Extra Storage" },
+  { src: "/images/products/garages/garage_14.jpg", alt: "Luxury oak framed double garage", caption: "Luxury Oak Garage" }
+];
+---
+
+<ProductLayout {title} {description} {images}>
+  <div class="fs-5">
+    <p>You love your car, so why not treat it to one of our custom garages and workshops? A sheltered, comfortable space allows you to tinker, clean, and work on your car to your (and your car's) heart's delight. Whether it’s a double garage for work and weekend cars or a simple space for weekly maintenance, we build garages to last and to serve your specific needs.</p>
+
+    <p>Oak frame garages provide a solid and safe place to store your car or other possessions. Additional features such as carports, garden shed workshops, and log stores can also be incorporated into our designs.</p>
+
+    <p>To discuss our full range of garages and workshops, contact us on <strong>01228 512303</strong>.</p>
+
+    <h3 class="mt-5">Gallery of Our Work</h3>
+    <p>Here are some photos of the prefabricated and custom wood garages we have built for our customers.</p>
+
+    <ul class="mb-4">
+      <li>Double garages and single garages</li>
+      <li>Oak framed garages with style and durability</li>
+      <li>Workshops and garden sheds integrated into your space</li>
+      <li>Garages with log storage or additional storage features</li>
+      <li>Custom designs tailored for vintage or classic cars</li>
+    </ul>
+  </div>
+</ProductLayout>
