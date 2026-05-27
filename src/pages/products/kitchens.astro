@@ -1,8 +1,28 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
-const title = "Kitchens";
-const description = "Bespoke kitchens designed to maximize space, functionality, and style. Modern, traditional, and farmhouse styles available.";
+const title = "Bespoke Kitchens Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Bespoke handcrafted kitchens in Carlisle, Cumbria. Farmhouse, shaker, and contemporary styles with custom islands and clever storage solutions.";
+
+const faqs = [
+  {
+    question: "What kitchen styles does Woodstyle Joinery offer?",
+    answer: "We design and build kitchens in a wide range of styles including farmhouse, shaker, contemporary, and rustic designs. Every kitchen is fully bespoke — customisable in wood type, style, paint, stain, and hardware — and tailored to your home and budget."
+  },
+  {
+    question: "Can Woodstyle Joinery design and build a kitchen island?",
+    answer: "Yes. Custom kitchen islands are one of our specialities, designed for practicality, easy cleaning, and enhanced storage. Islands can include built-in appliances, breakfast bars, and custom drawers, and can be incorporated into any kitchen layout."
+  },
+  {
+    question: "Do you offer bespoke kitchen storage solutions?",
+    answer: "Absolutely. Every cupboard and drawer in our kitchens is designed to make the most of your available space — from deep pan drawers and plate racks to integrated appliance housings and larder units."
+  },
+  {
+    question: "How do I get a quote for a bespoke kitchen in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form to arrange a free, no-obligation consultation. We will discuss your ideal layout, style, and requirements before preparing a detailed design and quote."
+  }
+];
 
 const images = [
   { src: "/images/products/kitchens/kitchen_1.jpg", alt: "Modern oak kitchen cabinets", caption: "Modern Oak Cabinets" },
@@ -23,7 +43,7 @@ const images = [
 ];
 ---
 
-<ProductLayout {title} {description} {images}>
+<ProductLayout {title} {description} {images} {faqs}>
   <div class="fs-5">
     <p>Kitchens are the heart of any home. A well-designed kitchen maximizes space, combines functionality with style, and provides a comfortable space to cook and entertain. Our bespoke kitchens are crafted to suit both modern and traditional tastes, tailored perfectly to your home.</p>
 

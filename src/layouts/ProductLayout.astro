@@ -1,8 +1,9 @@
 ---
 import Layout from "./Layout.astro";
 import ImageGallery from "../components/ImageGallery.astro";
+import FAQ from "../components/FAQ.astro";
 
-const { title, description, images } = Astro.props;
+const { title, description, images, faqs } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
@@ -20,14 +21,17 @@ const { title, description, images } = Astro.props;
       Contact Us About {title}
     </a>
   </section>
+
+  {faqs && faqs.length > 0 && (
+    <FAQ items={faqs} uid={title.toLowerCase().replace(/\s+/g, '-')} />
+  )}
 </Layout>
 
 <style>
-/* Wrap the gallery and align left */
 .gallery-wrapper {
   display: flex;
-  justify-content: flex-start; 
-  margin: 0 auto 20px 0;        
-  max-width: 640px;           
+  justify-content: flex-start;
+  margin: 0 auto 20px 0;
+  max-width: 640px;
 }
 </style>

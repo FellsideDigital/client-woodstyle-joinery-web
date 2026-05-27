@@ -1,0 +1,61 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  title?: string;
+  uid?: string;
+}
+
+const { items, title = "Frequently Asked Questions", uid = "faq" } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<section class="py-5 bg-light">
+  <div class="container py-3">
+    <h2 class="fw-bold text-primary-custom mb-4">{title}</h2>
+    <div class="accordion" id={`${uid}-accordion`}>
+      {items.map((item, i) => (
+        <div class="accordion-item border-0 mb-2 shadow-sm rounded">
+          <h3 class="accordion-header mb-0">
+            <button
+              class={`accordion-button fw-semibold rounded ${i > 0 ? 'collapsed' : ''}`}
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#${uid}-${i}`}
+              aria-expanded={i === 0 ? "true" : "false"}
+              aria-controls={`${uid}-${i}`}
+            >
+              {item.question}
+            </button>
+          </h3>
+          <div
+            id={`${uid}-${i}`}
+            class={`accordion-collapse collapse ${i === 0 ? 'show' : ''}`}
+          >
+            <div class="accordion-body text-muted fs-6">
+              {item.answer}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

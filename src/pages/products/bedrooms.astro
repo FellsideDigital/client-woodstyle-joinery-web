@@ -1,8 +1,28 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
-const title = "Bedrooms and Dressing Rooms";
-const description = "Luxury, contemporary fitted bedrooms and dressing rooms with bespoke joinery, storage solutions, and furniture crafted for your home.";
+const title = "Fitted Bedrooms & Dressing Rooms | Woodstyle Joinery";
+const description = "Luxury fitted bedrooms and dressing rooms by Woodstyle Joinery. Bespoke wardrobes, custom storage, and furniture handcrafted for Cumbrian homes.";
+
+const faqs = [
+  {
+    question: "What fitted bedroom solutions does Woodstyle Joinery offer?",
+    answer: "We design and build fitted wardrobes, floor-to-ceiling storage, dressing rooms with island units, children's bedrooms, and master bedroom furniture. Every piece is fully bespoke and tailored to your space, style, and storage needs."
+  },
+  {
+    question: "Can you build a bespoke dressing room in Cumbria?",
+    answer: "Yes. We design and build bespoke dressing rooms with custom hanging space, shelving, island units, and integrated lighting. Whether you have a dedicated room or are converting an alcove, we tailor the design to your available space."
+  },
+  {
+    question: "Do you make fitted bedrooms for children?",
+    answer: "Yes. We create custom children's bedroom furniture including fitted beds, wardrobes, storage units, and desk areas. Designs can grow with your child and maximise space in smaller rooms."
+  },
+  {
+    question: "How do I arrange a consultation for a fitted bedroom in Carlisle?",
+    answer: "Call us on 01228 512303 or complete our contact form. We will arrange a home visit to discuss your space, style preferences, and storage requirements before providing a detailed design and quote."
+  }
+];
 
 const images = [
   { src: "/images/products/bedrooms/bedroom_1.jpg", alt: "Master bedroom with luxury fitted wardrobe", caption: "Luxury Master Bedroom" },
@@ -16,7 +36,7 @@ const images = [
 ];
 ---
 
-<ProductLayout {title} {description} {images}>
+<ProductLayout {title} {description} {images} {faqs}>
   <div class="fs-5">
     <p>If you can't unwind in your own bedroom, where can you? The space around us where we sleep is important. That's why we make luxury, contemporary, quality fitted bedrooms with a huge choice of cupboards and storage ideas—even for children's bedrooms. Our joinery is second to none, and we can build your dream bedroom and furniture, with ideas ranging from small bedrooms to master bedrooms and everything in between.</p>
 

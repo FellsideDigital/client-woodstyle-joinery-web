@@ -1,8 +1,28 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
-const title = "Conservatories and Orangeries";
-const description = "Luxury, bespoke conservatories and orangeries with classical Victorian designs and oak-framed craftsmanship to enhance your home.";
+const title = "Conservatories & Orangeries Carlisle | Woodstyle Joinery";
+const description = "Classical Victorian conservatories and oak-framed orangeries in Cumbria. Bespoke hardwood designs that stand the test of time.";
+
+const faqs = [
+  {
+    question: "What types of conservatories does Woodstyle Joinery build?",
+    answer: "We specialise in classical Victorian conservatories and oak-framed orangeries. Unlike mass-produced uPVC alternatives, every conservatory is handcrafted using hardwood materials and designed to complement your home's existing architecture."
+  },
+  {
+    question: "Why choose an oak-framed conservatory over uPVC?",
+    answer: "Oak-framed conservatories are more durable, aesthetically superior, and require less long-term maintenance than uPVC. Once varnished, oak is naturally protected and greatly enhances the value and appearance of your home."
+  },
+  {
+    question: "Do you build orangeries as well as conservatories in Cumbria?",
+    answer: "Yes. We build both traditional conservatories and orangeries across Cumbria and the North of England. Both are fully bespoke, designed to complement your property and serve as a comfortable, usable space year-round."
+  },
+  {
+    question: "How long does a bespoke conservatory take to design and build?",
+    answer: "Timelines vary depending on the complexity of the design. We begin with CAD drawings for your approval, then manufacture and install. Contact us on 01228 512303 to discuss your specific project and timeline."
+  }
+];
 
 const images = [
   { src: "/images/products/conservatories/conservatory_1.jpg", alt: "Victorian style conservatory", caption: "Victorian Style Conservatory" },
@@ -19,7 +39,7 @@ const images = [
 ];
 ---
 
-<ProductLayout {title} {description} {images}>
+<ProductLayout {title} {description} {images} {faqs}>
   <div class="fs-5">
     <p>Contemporary conservatories often have a mass-produced look, but we specialise in classical Victorian designs, utilising our hardwood skills to create something truly unique. Be the envy of your neighbourhood with a luxury, bespoke oak-framed conservatory or orangery that complements your home's architecture and lifestyle.</p>
 

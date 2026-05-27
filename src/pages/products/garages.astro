@@ -1,8 +1,28 @@
 ---
 import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
-const title = "Garages and Workshops";
-const description = "Custom-built garages and workshops designed for cars, hobbies, and storage. Durable oak frame constructions tailored to your needs.";
+const title = "Oak Garages & Workshops Carlisle | Woodstyle Joinery";
+const description = "Custom oak-framed garages and workshops in Cumbria. Single, double, and bespoke designs with carports, log stores, and integrated storage.";
+
+const faqs = [
+  {
+    question: "What types of garages does Woodstyle Joinery build?",
+    answer: "We build single and double garages, oak-framed garages, garages with carports, and integrated garage-workshop combinations. Additional features such as log stores, garden sheds, and hobby workshops can also be incorporated into your design."
+  },
+  {
+    question: "Are oak-framed garages durable?",
+    answer: "Yes. Oak is naturally resistant to rot and can last for centuries when properly maintained. Oak-framed garages are an extremely durable, long-lasting investment that also adds significant aesthetic value and kerb appeal to your property."
+  },
+  {
+    question: "Can I have a combined garage and workshop in Cumbria?",
+    answer: "Absolutely. Many of our customers combine garage and workshop space in a single bespoke structure. We design the layout to suit your specific needs — whether that means car parking, a hobby or trade workshop, integrated tool storage, or all three."
+  },
+  {
+    question: "How do I get a quote for a bespoke garage in Carlisle?",
+    answer: "Call us on 01228 512303 or complete our contact form. We will arrange a consultation to discuss your space, requirements, and preferred design before providing a detailed quote."
+  }
+];
 
 const images = [
   { src: "/images/products/garages/garage_1.jpg", alt: "Double garage with timber frame", caption: "Double Garage" },
@@ -22,7 +42,7 @@ const images = [
 ];
 ---
 
-<ProductLayout {title} {description} {images}>
+<ProductLayout {title} {description} {images} {faqs}>
   <div class="fs-5">
     <p>You love your car, so why not treat it to one of our custom garages and workshops? A sheltered, comfortable space allows you to tinker, clean, and work on your car to your (and your car's) heart's delight. Whether it’s a double garage for work and weekend cars or a simple space for weekly maintenance, we build garages to last and to serve your specific needs.</p>
 

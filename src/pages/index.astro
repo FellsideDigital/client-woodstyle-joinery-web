@@ -1,8 +1,35 @@
 ---
 // src/pages/index.astro
 import BaseLayout from '../layouts/Layout.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    question: "Where does Woodstyle Joinery operate?",
+    answer: "Woodstyle Joinery is based in Brisco, Carlisle, Cumbria, and serves customers across Cumbria and the wider North of England. We have completed projects as far afield as Cornwall."
+  },
+  {
+    question: "How long has Woodstyle Joinery been in business?",
+    answer: "Woodstyle Joinery was founded in 1988, giving us over 35 years of experience crafting bespoke woodwork and joinery for homes and gardens across Cumbria."
+  },
+  {
+    question: "Do you offer a free quote?",
+    answer: "Yes. Call us on 01228 512303 or send a message via our contact page for a free, no-obligation quote on your joinery project."
+  },
+  {
+    question: "What types of bespoke joinery do you offer?",
+    answer: "We offer a full range of bespoke joinery including kitchens, fitted bedrooms and dressing rooms, conservatories and orangeries, garages and workshops, garden structures, log stores, and summerhouses. Every piece is handcrafted and fully custom."
+  },
+  {
+    question: "How does the Woodstyle design process work?",
+    answer: "We use CAD software to create detailed drawings of your project before any manufacture begins. Designs are shared by email for your review and approval, with amendments made until you are completely satisfied with the plan."
+  }
+];
 ---
-<BaseLayout title="Home - Woodstyle Joinery">
+<BaseLayout
+  title="Bespoke Joinery Carlisle, Cumbria | Woodstyle Joinery"
+  description="Bespoke joinery and woodwork crafted for Cumbrian homes since 1988. Kitchens, bedrooms, conservatories, garages and more. Call 01228 512303."
+>
     <!-- HERO -->
     <section class="bg-primary-custom text-white text-center py-5 py-lg-6">
       <div class="container py-5">
@@ -146,7 +173,7 @@ import BaseLayout from '../layouts/Layout.astro';
 
           <!-- Product 3 -->
           <div class="col-md-4">
-            <a href="products/home-offices" class="text-decoration-none">
+            <a href="/products/garages" class="text-decoration-none">
               <div class="product-card rounded shadow-sm">
                 <img
                   src="/images/products/garages/garage_14.jpg"
@@ -196,4 +223,6 @@ import BaseLayout from '../layouts/Layout.astro';
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <FAQ items={faqs} uid="home-faq" />
 </BaseLayout>
