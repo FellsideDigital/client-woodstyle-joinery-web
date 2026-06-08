@@ -26,10 +26,13 @@ const schema = {
 };
 ---
 
-<section class="py-5 bg-light">
+<section class="section bg-light">
   <div class="container py-3">
-    <h2 class="fw-bold text-primary-custom mb-4">{title}</h2>
-    <div class="accordion" id={`${uid}-accordion`}>
+    <div class="text-center mb-5" data-reveal>
+      <span class="section-kicker">Good To Know</span>
+      <h2 class="fw-bold text-primary-custom heading-accent">{title}</h2>
+    </div>
+    <div class="accordion mx-auto" id={`${uid}-accordion`} style="max-width: 820px" data-reveal>
       {items.map((item, i) => (
         <div class="accordion-item border-0 mb-2 shadow-sm rounded">
           <h3 class="accordion-header mb-0">

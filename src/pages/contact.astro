@@ -8,29 +8,30 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 
 <Layout title={title} description={description}>
   <!-- Hero Section -->
-  <section class="bg-primary-custom text-white text-center py-5 mb-5">
-    <div class="container">
-      <h1 class="display-5 fw-bold mb-3">{title}</h1>
-      <p class="lead mb-0">{description}</p>
+  <section class="page-hero text-center py-5 mb-5">
+    <div class="container py-4" data-reveal>
+      <span class="hero-eyebrow">Get In Touch</span>
+      <h1 class="display-5 fw-bold mb-3">Let's Talk About Your Project</h1>
+      <p class="lead mx-auto mb-0" style="max-width: 640px">Get in touch with Woodstyle Joinery for a free, no-obligation quote on bespoke joinery in Carlisle, Cumbria.</p>
     </div>
   </section>
 
   <section class="container mb-5">
     <div class="row g-5 align-items-start">
       <!-- Contact Info -->
-      <div class="col-md-4">
-        <div class="p-4 bg-light rounded shadow-sm h-100">
+      <div class="col-md-4" data-reveal>
+        <div class="sidebar-card p-4 rounded-4 shadow-sm h-100">
           <h5 class="fw-bold text-primary-custom mb-4">Our Details</h5>
-          <p class="mb-3">
-            <i data-feather="phone" class="me-2 text-primary-custom"></i>
-            <a href="tel:01228512303" class="text-decoration-none text-dark">01228 512303</a>
+          <p class="mb-3 d-flex align-items-start gap-2">
+            <i data-feather="phone" class="contact-icon mt-1"></i>
+            <a href="tel:01228512303" class="text-decoration-none text-dark fw-medium">01228 512303</a>
           </p>
-          <p class="mb-3">
-            <i data-feather="mail" class="me-2 text-primary-custom"></i>
-            <a href="mailto:info@woodstylejoinery.co.uk" class="text-decoration-none text-dark">info@woodstylejoinery.co.uk</a>
+          <p class="mb-3 d-flex align-items-start gap-2">
+            <i data-feather="mail" class="contact-icon mt-1"></i>
+            <a href="mailto:info@woodstylejoinery.co.uk" class="text-decoration-none text-dark fw-medium">info@woodstylejoinery.co.uk</a>
           </p>
-          <p class="mb-0 d-flex align-items-start">
-            <i data-feather="map-pin" class="me-2 text-primary-custom mt-1"></i>
+          <p class="mb-0 d-flex align-items-start gap-2">
+            <i data-feather="map-pin" class="contact-icon mt-1"></i>
             <span>
               Wood Bank Farm, Brisco<br />
               Carlisle, Cumbria<br />
@@ -41,16 +42,16 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
       </div>
 
       <!-- Contact Form -->
-      <div class="col-md-8">
-        <form class="p-5 border rounded shadow-sm bg-white" action="https://formspree.io/f/maypnvja" method="POST">
+      <div class="col-md-8" data-reveal data-reveal-delay="1">
+        <form id="contact-form" class="sidebar-card p-4 p-md-5 rounded-4 shadow-sm" action="https://formspree.io/f/maypnvja" method="POST">
           <h5 class="fw-bold text-primary-custom mb-4">Send Us a Message</h5>
           <div class="mb-3">
             <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required />
+            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" required />
+            <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" autocomplete="email" inputmode="email" required />
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
@@ -80,20 +81,27 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
   </section>
 
   <!-- Call to Action -->
-    <section class="bg-primary-custom text-white text-center py-5">
+    <section class="page-hero text-center py-5">
       <div class="container py-5">
       <h2 class="fw-bold mb-4">Ready to Discuss Your Project?</h2>
-      <p class="lead mb-4">Call us or send a message today, and let's bring your dream build to life!</p>
-      <a href="tel:01228512303" class="btn btn-light btn-lg fw-bold me-3">
-        <i data-feather="phone" class="me-2"></i> Call 01228 512303
-      </a>
-      <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
-        Send a Message
-      </a>
+      <p class="lead mb-4 mx-auto" style="max-width: 560px">Call us or send a message today, and let's bring your dream build to life.</p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="tel:01228512303" class="btn btn-light btn-lg fw-bold">
+          <i data-feather="phone" class="me-2"></i> Call 01228 512303
+        </a>
+        <a href="#contact-form" class="btn btn-outline-custom btn-lg fw-bold">
+          Send a Message
+        </a>
+      </div>
     </div>
   </section>
-
-  <script>
-    feather.replace();
-  </script>
 </Layout>
+
+<style>
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    stroke: var(--primary);
+  }
+</style>

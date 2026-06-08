@@ -7,11 +7,12 @@ import Layout from "../layouts/Layout.astro";
   description="Read what our customers say about Woodstyle Joinery's craftsmanship and service. Real reviews from satisfied clients across Carlisle and Cumbria."
 >
   <!-- Hero -->
-  <section class="bg-primary-custom text-white text-center py-5 mb-5">
-    <div class="container">
+  <section class="page-hero text-center py-5 mb-5">
+    <div class="container py-4" data-reveal>
+      <span class="hero-eyebrow">In Their Words</span>
       <h1 class="display-5 fw-bold">Testimonials</h1>
-      <p class="lead mx-auto" style="max-width: 720px">
-        Words from customers who trusted Woodstyle Joinery with their homes
+      <p class="lead mx-auto mb-0" style="max-width: 640px">
+        Words from customers who trusted Woodstyle Joinery with their homes and gardens
       </p>
     </div>
   </section>
@@ -21,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="row g-5">
 
       <!-- Testimonial -->
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card">
           <h3>Summerhouse</h3>
           <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
@@ -32,7 +33,7 @@ import Layout from "../layouts/Layout.astro";
         </article>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card">
           <h3>Wood Stores</h3>
           <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
@@ -42,7 +43,7 @@ import Layout from "../layouts/Layout.astro";
         </article>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card">
           <h3>Bespoke Joinery</h3>
           <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
@@ -54,7 +55,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <!-- Image Testimonial -->
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card testimonial-with-image">
           <div class="testimonial-grid">
             <img
@@ -78,7 +79,7 @@ import Layout from "../layouts/Layout.astro";
         </article>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card">
           <h3>Woodland Log Shed</h3>
           <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
@@ -90,7 +91,7 @@ import Layout from "../layouts/Layout.astro";
         </article>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" data-reveal>
         <article class="testimonial-card">
           <h3>Oak Log Store & Conservatory</h3>
           <blockquote class="border-start border-4 ps-4 fst-italic mt-4">
@@ -111,16 +112,57 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
 .testimonial-card {
-  background: #ffffff;
-  border-radius: 0.5rem;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   padding: 2.5rem;
   height: 100%;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.6rem;
+  right: 1.4rem;
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
 }
 
 .testimonial-card h3 {
-  font-weight: 700;
-  color: #2f3e34;
+  font-weight: 600;
+  color: var(--ink);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.testimonial-card h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.testimonial-card blockquote {
+  border-color: var(--secondary) !important;
+  color: var(--ink-muted);
 }
 
 .testimonial-with-image {
@@ -138,8 +180,8 @@ import Layout from "../layouts/Layout.astro";
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {

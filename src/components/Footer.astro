@@ -1,23 +1,29 @@
 ---
 // src/components/Footer.astro
 ---
-<footer class="bg-dark text-secondary pt-5">
+<footer class="site-footer pt-5">
   <div class="container">
 
-    <div class="row g-4 align-items-start">
+    <div class="row g-5 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-lg-3 col-md-6">
+        <img src="/images/site-logo.png" alt="Woodstyle Joinery Logo" height="44" class="mb-3 footer-logo" />
+        <p class="footer-tagline mb-0">Bespoke joinery, handcrafted in Cumbria since 1988.</p>
+      </div>
 
       <!-- Location -->
-      <div class="col-md-3">
-        <h5 class="text-white fw-bold mb-3">Location</h5>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading mb-3">Location</h5>
 
         <address class="mb-0 not-italic">
           <a
             href="https://www.google.com/maps/search/?api=1&query=Wood+Bank+Farm+Brisco+Carlisle+CA4+0QP"
             target="_blank"
             rel="noopener"
-            class="footer-link d-inline-flex align-items-start gap-2 mb-1"
+            class="footer-link d-inline-flex align-items-start gap-2"
           >
-            <span class="footer-icon">📍</span>
+            <i data-feather="map-pin" class="footer-icon"></i>
             <span>
               Wood Bank Farm, Brisco<br />
               Carlisle, Cumbria<br />
@@ -28,15 +34,15 @@
       </div>
 
       <!-- Contact -->
-      <div class="col-md-3">
-        <h5 class="text-white fw-bold mb-3">Contact</h5>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading mb-3">Contact</h5>
 
         <p class="mb-2">
           <a
             href="tel:+441228512303"
             class="footer-link d-inline-flex align-items-center gap-2"
           >
-            <span class="footer-icon">📞</span>
+            <i data-feather="phone" class="footer-icon"></i>
             01228 512303
           </a>
         </p>
@@ -46,55 +52,93 @@
             href="mailto:info@woodstylejoinery.co.uk"
             class="footer-link d-inline-flex align-items-center gap-2"
           >
-            <span class="footer-icon">✉️</span>
+            <i data-feather="mail" class="footer-icon"></i>
             info@woodstylejoinery.co.uk
           </a>
         </p>
       </div>
 
       <!-- Hours -->
-      <div class="col-md-4">
-        <h5 class="text-white fw-bold mb-3">Workshop Hours</h5>
-        <p class="mb-1">Mon–Fri: 9am – 5pm</p>
-        <p class="mb-1">Sat: 10am – 2pm</p>
-        <p class="mb-0">Sun: Closed</p>
-      </div>
-
-      <!-- Badge -->
-      <div class="col-md-2 text-center">
-        <img
-          src="/images/25-years-badge.png"
-          alt="25 Years of Craftsmanship"
-          class="img-fluid rounded shadow mb-2"
-          style="max-height: 90px;"
-        />
-        <p class="small mb-0">Established Craft</p>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading mb-3">Workshop Hours</h5>
+        <p class="mb-1 d-flex justify-content-between footer-hours"><span>Mon–Fri</span><span>9am – 5pm</span></p>
+        <p class="mb-1 d-flex justify-content-between footer-hours"><span>Saturday</span><span>10am – 2pm</span></p>
+        <p class="mb-0 d-flex justify-content-between footer-hours"><span>Sunday</span><span>Closed</span></p>
       </div>
 
     </div>
 
-    <div class="border-top border-secondary mt-4 pt-3 text-center small">
-      © 2026 Woodstyle Joinery. All rights reserved.
+    <div class="footer-divider mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 text-center">
+      <span class="small">© 2026 Woodstyle Joinery. All rights reserved.</span>
+      <span class="small footer-credit">Established Craft · 35+ Years of Woodwork</span>
     </div>
 
   </div>
 </footer>
 
 <style>
+.site-footer {
+  background-color: var(--ink, #2b3328);
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 3px solid var(--accent, #a87c4f);
+  padding-bottom: 2rem;
+}
+
+.footer-heading {
+  font-family: var(--font-heading, serif);
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 26ch;
+}
+
 .footer-link {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-link:hover {
   color: #ffffff;
-  text-decoration: underline;
+  transform: translateX(2px);
 }
 
 .footer-icon {
-  font-size: 0.95rem;
-  opacity: 0.85;
-  line-height: 1.2;
+  width: 17px;
+  height: 17px;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  stroke: var(--secondary, #8b9d83);
+}
+
+.footer-hours {
+  max-width: 220px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+.footer-hours span:first-child {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-credit {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 </style>

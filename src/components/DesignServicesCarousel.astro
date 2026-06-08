@@ -3,8 +3,6 @@
 ---
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
-
 .carousel {
   display: flex;
   align-items: center;
@@ -18,6 +16,9 @@
   position: relative;
   width: 600px;
   height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .slides img {
@@ -28,7 +29,6 @@
   object-fit: cover;
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
-  border-radius: 0.75rem;
 }
 
 .slides img.active {
@@ -44,24 +44,55 @@
 }
 
 .nav-link {
-  font-family: Lora, serif;
-  font-size: 2.2rem;
-  line-height: 1.4;
-  color: #8a8f8c;
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.35;
+  color: var(--ink-muted);
   cursor: pointer;
-  margin-bottom: 1.2rem;
-  transition: all 0.3s ease;
+  margin-bottom: 1.1rem;
+  background: none;
+  border: 0;
+  text-align: left;
+  padding: 0.2rem 0;
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
-.nav-link:hover {
-  color: #556956;
+.nav-link .nav-index {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--primary);
   transform: translateX(6px);
+  outline: none;
 }
 
 .nav-link.active {
-  color: #1c1e1f;
-  font-weight: 700;
-  pointer-events: none;
+  color: var(--ink);
+  font-weight: 600;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 4px;
+  height: 1.1em;
+  border-radius: 2px;
+  background: var(--accent);
 }
 
 /* RESPONSIVE */
@@ -78,7 +109,14 @@
   }
 
   .nav-link {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-link.active {
+    padding-left: 0;
+  }
+  .nav-link.active::before {
+    display: none;
   }
 }
 </style>
@@ -101,14 +139,20 @@
   </div>
 
   <ul class="nav-links">
-    <li class="nav-link active" data-index="0">
-      New Kitchens or Replacements
+    <li>
+      <button type="button" class="nav-link active" data-index="0">
+        <span class="nav-index">01</span> New Kitchens or Replacements
+      </button>
     </li>
-    <li class="nav-link" data-index="1">
-      Garden Furniture Design
+    <li>
+      <button type="button" class="nav-link" data-index="1">
+        <span class="nav-index">02</span> Garden Furniture Design
+      </button>
     </li>
-    <li class="nav-link" data-index="2">
-      Garage Design
+    <li>
+      <button type="button" class="nav-link" data-index="2">
+        <span class="nav-index">03</span> Garage Design
+      </button>
     </li>
   </ul>
 </div>
@@ -117,13 +161,15 @@
 const slides = document.querySelectorAll('.carousel .slides img');
 const navLinks = document.querySelectorAll('.carousel .nav-link');
 
-navLinks.forEach((link, index) => {
-  link.addEventListener('click', () => {
-    slides.forEach(slide => slide.classList.remove('active'));
-    navLinks.forEach(nav => nav.classList.remove('active'));
+const activate = (index) => {
+  slides.forEach((slide) => slide.classList.remove('active'));
+  navLinks.forEach((nav) => nav.classList.remove('active'));
+  slides[index].classList.add('active');
+  navLinks[index].classList.add('active');
+};
 
-    slides[index].classList.add('active');
-    link.classList.add('active');
-  });
+navLinks.forEach((link, index) => {
+  link.addEventListener('click', () => activate(index));
+  link.addEventListener('mouseenter', () => activate(index));
 });
 </script>

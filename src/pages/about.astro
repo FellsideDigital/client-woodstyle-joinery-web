@@ -7,10 +7,11 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
 
 <Layout title={title} description={description}>
   <!-- HERO -->
-  <section class="bg-primary-custom text-white text-center py-5 mb-5">
-    <div class="container py-5">
-      <h1 class="display-5 fw-bold">{title}</h1>
-      <p class="lead mx-auto" style="max-width: 720px">{description}</p>
+  <section class="page-hero text-center py-5 mb-5">
+    <div class="container py-5" data-reveal>
+      <span class="hero-eyebrow">Our Story</span>
+      <h1 class="display-5 fw-bold">About Woodstyle Joinery</h1>
+      <p class="lead mx-auto" style="max-width: 640px">Handcrafting bespoke woodwork across Cumbria since 1988 — quality craftsmanship with a personal touch.</p>
     </div>
   </section>
 
@@ -18,8 +19,9 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
   <section class="container py-5">
     <div class="row g-5">
       <!-- Text Column -->
-      <div class="col-lg-8">
-        <h2 class="fw-bold text-primary-custom mb-4">Our Story</h2>
+      <div class="col-lg-8" data-reveal>
+        <span class="section-kicker">Since 1988</span>
+        <h2 class="fw-bold text-primary-custom heading-accent mb-4">Our Story</h2>
         <p class="fs-5 mb-4">
           Woodstyle Joinery has been handcrafting high-quality woodwork for the Cumbrian community since 1988. 
           What started as a passion for beautifully crafted pieces for homes has grown into a full-service business, 
@@ -40,76 +42,93 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
       </div>
 
       <!-- Sidebar -->
-      <div class="col-lg-4">
+      <div class="col-lg-4" data-reveal data-reveal-delay="1">
         <!-- Impact Box -->
-        <div class="sidebar-card mb-4 p-4 rounded shadow-sm bg-light">
+        <div class="sidebar-card mb-4 p-4 rounded-4 shadow-sm">
           <h5 class="fw-bold text-primary-custom mb-3">Our Impact</h5>
-          <ul class="list-unstyled mb-0 fs-6">
-            <li class="mb-2"><span class="me-2">🛠️</span><strong class="me-1">35+</strong>Years of Craftsmanship</li>
-            <li class="mb-2"><span class="me-2">🏡</span><strong class="me-1">500+</strong>Completed Projects</li>
-            <li class="mb-2"><span class="me-2">⭐</span><strong class="me-1">100%</strong>Customer Satisfaction</li>
-            <li class="mb-2"><span class="me-2">👷‍♂️</span><strong class="me-1">10+</strong>Skilled Joiners</li>
+          <ul class="list-unstyled mb-0 fs-6 impact-list">
+            <li class="mb-3 d-flex align-items-center gap-3">
+              <i data-feather="tool" class="impact-icon"></i>
+              <span><strong>35+</strong> Years of Craftsmanship</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-3">
+              <i data-feather="home" class="impact-icon"></i>
+              <span><strong>500+</strong> Completed Projects</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center gap-3">
+              <i data-feather="star" class="impact-icon"></i>
+              <span><strong>100%</strong> Customer Satisfaction</span>
+            </li>
+            <li class="mb-0 d-flex align-items-center gap-3">
+              <i data-feather="users" class="impact-icon"></i>
+              <span><strong>10+</strong> Skilled Joiners</span>
+            </li>
           </ul>
         </div>
 
         <!-- Quick Links Box -->
-        <div class="sidebar-card p-4 rounded shadow-sm bg-light">
+        <div class="sidebar-card p-4 rounded-4 shadow-sm">
           <h5 class="fw-bold text-primary-custom mb-3">Explore More</h5>
           <ul class="list-unstyled mb-0 fs-6">
             <li class="mb-2">
-              <a href="/testimonials" class="sidebar-link">
-                Client Testimonials
+              <a href="/testimonials" class="sidebar-link d-inline-flex align-items-center gap-2">
+                <i data-feather="arrow-right" class="sidebar-link-icon"></i> Client Testimonials
               </a>
             </li>
             <li class="mb-2">
-              <a href="/products" class="sidebar-link">
-                Products
+              <a href="/products" class="sidebar-link d-inline-flex align-items-center gap-2">
+                <i data-feather="arrow-right" class="sidebar-link-icon"></i> Products
               </a>
             </li>
             <li class="mb-2">
-              <a href="/design" class="sidebar-link">
-                Design Services
+              <a href="/design" class="sidebar-link d-inline-flex align-items-center gap-2">
+                <i data-feather="arrow-right" class="sidebar-link-icon"></i> Design Services
               </a>
             </li>
-            <li class="mb-2">
-              <a href="/contact" class="sidebar-link">
-                Contact Us
+            <li class="mb-0">
+              <a href="/contact" class="sidebar-link d-inline-flex align-items-center gap-2">
+                <i data-feather="arrow-right" class="sidebar-link-icon"></i> Contact Us
               </a>
             </li>
           </ul>
         </div>
-       
+
       </div>
     </div>
   </section>
 
   <style>
-    .sidebar-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .impact-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      stroke: var(--primary);
+      background: rgba(85, 105, 86, 0.1);
+      border-radius: 8px;
+      padding: 8px;
+      box-sizing: content-box;
     }
-    .sidebar-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-    }
-    .sidebar-card ul li {
-      display: flex;
-      align-items: center;
-    }
-    .sidebar-card ul li span {
-      font-size: 1.25rem;
-    }
-    .sidebar-card ul li a {
-      display: flex;
-      align-items: center;
+    .impact-list strong {
+      color: var(--ink);
     }
     .sidebar-link {
-      color: #556956; /* primary green */
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      transition: color 0.2s ease;
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s var(--ease), gap 0.2s var(--ease);
     }
     .sidebar-link:hover {
-      color: #8b9d83; /* secondary green on hover */
+      color: var(--primary);
+      gap: 0.65rem !important;
+    }
+    .sidebar-link-icon {
+      width: 15px;
+      height: 15px;
+      stroke: var(--accent);
+      transition: transform 0.2s var(--ease);
+    }
+    .sidebar-link:hover .sidebar-link-icon {
+      transform: translateX(2px);
     }
   </style>
 </Layout>

@@ -10,16 +10,19 @@ const description = "CAD-designed bespoke joinery tailored to your home. From cl
 <Layout title={title} description={description}>
 
   <!-- Hero Section -->
-  <section class="bg-primary-custom text-white text-center py-5 mb-5">
-    <div class="container py-5">
-      <h1 class="display-5 fw-bold">{title}</h1>
-      <p class="lead mx-auto" style="max-width: 720px">{description}</p>
+  <section class="page-hero text-center py-5 mb-5">
+    <div class="container py-5" data-reveal>
+      <span class="hero-eyebrow">CAD-Designed · Built To Fit</span>
+      <h1 class="display-5 fw-bold">Joinery Design Services</h1>
+      <p class="lead mx-auto" style="max-width: 640px">From clever storage solutions to garden rooms — we bring your ideas to life with detailed CAD drawings before a single cut is made.</p>
     </div>
   </section>
 
   <!-- Text Section -->
   <section class="container py-5">
-    <h2 class="fw-bold text-primary-custom mb-4">Design Service</h2>
+    <div class="mx-auto" style="max-width: 760px" data-reveal>
+    <span class="section-kicker">How It Works</span>
+    <h2 class="fw-bold text-primary-custom heading-accent mb-4">Design Service</h2>
     <p class="fs-5 mb-3">
       We use the latest CAD software to plan your joinery project and create drawings for your approval before manufacture goes ahead. Throughout the design process, alterations and additions can be easily added whilst maintaining accuracy, which is crucial to producing a quality finish.
     </p>
@@ -33,16 +36,27 @@ const description = "CAD-designed bespoke joinery tailored to your home. From cl
       Look forward to hearing from you.<br/>
       <strong>The Woodstyle Team</strong>
     </p>
+    </div>
   </section>
 
   <!-- Carousel Section -->
-  <section class="container py-5">
-    <DesignServicesCarousel />
+  <section class="container pb-5">
+    <div class="text-center mb-5" data-reveal>
+      <span class="section-kicker">What We Design</span>
+      <h2 class="fw-bold text-primary-custom heading-accent">Ideas We Bring To Life</h2>
+    </div>
+    <div data-reveal>
+      <DesignServicesCarousel />
+    </div>
   </section>
 
   <!-- Call to Action -->
-  <section class="text-center py-5 bg-light">
-    <div class="container">
+  <section class="text-center section bg-cream-deep">
+    <div class="container" data-reveal>
+      <h2 class="fw-bold text-primary-custom mb-3">Have an Idea in Mind?</h2>
+      <p class="lead mx-auto mb-4" style="max-width: 520px">
+        Let’s turn it into a detailed CAD design built to fit your space.
+      </p>
       <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
         Contact Us About Your Design
       </a>

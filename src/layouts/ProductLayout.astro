@@ -3,23 +3,44 @@ import Layout from "./Layout.astro";
 import ImageGallery from "../components/ImageGallery.astro";
 import FAQ from "../components/FAQ.astro";
 
-const { title, description, images, faqs } = Astro.props;
+const { title, heading = title, description, images, faqs } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
-  <section class="container py-5">
-    <h1 class="fw-bold text-primary-custom mb-4">{title}</h1>
-    <p class="fs-5 mb-5">{description}</p>
+  <!-- Hero -->
+  <section class="page-hero text-center py-5 mb-5">
+    <div class="container py-4" data-reveal>
+      <span class="hero-eyebrow">Bespoke Joinery · Carlisle</span>
+      <h1 class="display-5 fw-bold mb-3">{heading}</h1>
+      <p class="lead mx-auto mb-0" style="max-width: 640px">{description}</p>
+    </div>
+  </section>
 
-    <slot />
-
-    <div class="gallery-wrapper mb-4">
-      <ImageGallery images={images} />
+  <section class="container">
+    <div class="product-copy mx-auto" data-reveal>
+      <slot />
     </div>
 
-    <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold mt-4">
-      Contact Us About {title}
-    </a>
+    <div class="text-center mt-5" data-reveal>
+      <span class="section-kicker">Gallery of Our Work</span>
+      <h2 class="fw-bold text-primary-custom heading-accent">{heading} Gallery</h2>
+    </div>
+    <div class="gallery-wrapper" data-reveal>
+      <ImageGallery images={images} />
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="bg-cream-deep text-center section mt-5">
+    <div class="container" data-reveal>
+      <h2 class="fw-bold text-primary-custom mb-3">Interested in {heading}?</h2>
+      <p class="lead mx-auto mb-4" style="max-width: 520px">
+        Tell us about your project and we’ll prepare a free, no-obligation quote.
+      </p>
+      <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
+        Contact Us About {heading}
+      </a>
+    </div>
   </section>
 
   {faqs && faqs.length > 0 && (
@@ -28,10 +49,13 @@ const { title, description, images, faqs } = Astro.props;
 </Layout>
 
 <style>
+.product-copy {
+  max-width: 760px;
+}
 .gallery-wrapper {
   display: flex;
-  justify-content: flex-start;
-  margin: 0 auto 20px 0;
-  max-width: 640px;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+  max-width: 680px;
 }
 </style>
