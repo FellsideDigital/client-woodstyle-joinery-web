@@ -7,68 +7,126 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 ---
 
 <Layout title={title} description={description}>
-  <!-- Hero Section -->
-  <section class="page-hero text-center py-12 mb-12">
-    <div class="container py-6" data-reveal>
+  <!-- Hero -->
+  <section class="page-hero text-center pt-14 pb-14 md:pt-16 md:pb-48">
+    <div class="container" data-reveal>
       <span class="hero-eyebrow">Get In Touch</span>
       <h1 class="display-5 font-bold mb-4">Let's Talk About Your Project</h1>
-      <p class="lead mx-auto mb-0" style="max-width: 640px">Get in touch with Woodstyle Joinery for a free, no-obligation quote on bespoke joinery in Carlisle, Cumbria.</p>
+      <p class="lead mx-auto mb-0" style="max-width: 640px">
+        Tell us what you have in mind and we'll come back with a free, no-obligation quote. No pressure, just honest advice from a family-run workshop.
+      </p>
     </div>
   </section>
 
-  <section class="container mb-12">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-      <!-- Contact Info -->
-      <div class="md:col-span-4" data-reveal>
-        <div class="sidebar-card p-6 rounded-lg shadow-sm h-full">
-          <h5 class="font-bold text-primary-custom mb-6">Our Details</h5>
-          <p class="mb-4 flex items-start gap-2">
-            <i data-feather="phone" class="contact-icon mt-1"></i>
-            <a href="tel:01228512303" class="no-underline text-ink font-medium">01228 512303</a>
-          </p>
-          <p class="mb-4 flex items-start gap-2">
-            <i data-feather="mail" class="contact-icon mt-1"></i>
-            <a href="mailto:joiners@woodstylejoinery.co.uk" class="no-underline text-ink font-medium">joiners@woodstylejoinery.co.uk</a>
-          </p>
-          <p class="mb-0 flex items-start gap-2">
-            <i data-feather="map-pin" class="contact-icon mt-1"></i>
-            <span>
-              Wood Bank Farm, Brisco<br />
-              Carlisle, Cumbria<br />
-              United Kingdom, CA4 0QP
-            </span>
-          </p>
-        </div>
-      </div>
+  <!-- Contact panel (overlaps the hero) -->
+  <section class="container relative z-10 mt-8 md:-mt-32 mb-16">
+    <div class="contact-panel grid grid-cols-1 md:grid-cols-12" data-reveal>
+      <!-- Details -->
+      <aside class="info-panel md:col-span-5">
+        <h2 class="info-title font-bold">Visit the workshop</h2>
+        <p class="info-intro">Handcrafting bespoke joinery for Cumbrian homes since 1988.</p>
 
-      <!-- Contact Form -->
-      <div class="md:col-span-8" data-reveal data-reveal-delay="1">
-        <form id="contact-form" class="sidebar-card p-6 md:p-12 rounded-lg shadow-sm" action="https://formspree.io/f/maypnvja" method="POST">
-          <h5 class="font-bold text-primary-custom mb-6">Send Us a Message</h5>
-          <div class="mb-4">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-badge"><i data-feather="phone" aria-hidden="true"></i></span>
+            <span>
+              <span class="info-label">Call us</span>
+              <a href="tel:01228512303" class="no-underline font-medium">01228 512303</a>
+            </span>
+          </li>
+          <li class="info-item">
+            <span class="info-badge"><i data-feather="mail" aria-hidden="true"></i></span>
+            <span>
+              <span class="info-label">Email</span>
+              <a href="mailto:joiners@woodstylejoinery.co.uk" class="no-underline font-medium">joiners@woodstylejoinery.co.uk</a>
+            </span>
+          </li>
+          <li class="info-item">
+            <span class="info-badge"><i data-feather="map-pin" aria-hidden="true"></i></span>
+            <span>
+              <span class="info-label">Find us</span>
+              <span class="info-value">Wood Bank Farm, Brisco<br />Carlisle, Cumbria CA4 0QP</span>
+            </span>
+          </li>
+          <li class="info-item">
+            <span class="info-badge"><i data-feather="clock" aria-hidden="true"></i></span>
+            <span>
+              <span class="info-label">Opening hours</span>
+              <span class="info-value">
+                Mon–Fri&nbsp;&nbsp;9am – 5pm<br />
+                Saturday&nbsp;&nbsp;8am – 12pm<br />
+                Sunday&nbsp;&nbsp;Closed
+              </span>
+            </span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Form -->
+      <div class="form-side md:col-span-7">
+        <!-- Success state (hidden until submit succeeds) -->
+        <div id="form-success" class="form-success" role="status" aria-live="polite">
+          <span class="success-badge"><i data-feather="check" aria-hidden="true"></i></span>
+          <h2 class="font-bold mb-2">Message sent</h2>
+          <p class="text-muted mb-6">Thanks for getting in touch — we'll reply within one working day. If it's urgent, give us a call on 01228 512303.</p>
+          <button type="button" id="form-reset" class="btn btn-secondary-custom font-bold">Send another message</button>
+        </div>
+
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://formspree.io/f/maypnvja"
+          method="POST"
+        >
+          <span class="section-kicker">Free Quote</span>
+          <h2 class="font-bold text-primary-custom mb-6">Send us a message</h2>
+
+          <!-- Spam honeypot — leave blank -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New enquiry — Woodstyle Joinery website" />
+
+          <div id="form-error" class="form-error" role="alert">
+            <i data-feather="alert-triangle" aria-hidden="true"></i>
+            <span>Something went wrong sending your message. Please try again, or call us on 01228 512303.</span>
           </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="phone" class="form-label">Phone <span class="label-optional">(optional)</span></label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="07700 900000" autocomplete="tel" inputmode="tel" />
+            </div>
+          </div>
+
           <div class="mb-4">
-            <label for="email" class="form-label">Email Address</label>
+            <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" autocomplete="email" inputmode="email" required />
           </div>
-          <div class="mb-4">
+
+          <div class="mb-6">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us a little about your project — rooms, timescale, anything that helps us picture it." required></textarea>
           </div>
-          <button type="submit" class="btn btn-secondary-custom btn-lg font-bold">
-            Send Message
-          </button>
+
+          <button type="submit" class="btn btn-secondary-custom btn-lg font-bold">Send message</button>
+          <p class="form-note">We usually reply within one working day.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Google Map -->
-  <section class="mb-12">
-    <div class="container rounded overflow-hidden shadow-sm">
+  <!-- Map -->
+  <section class="container mb-16">
+    <div class="text-center mb-8" data-reveal>
+      <span class="section-kicker">Where To Find Us</span>
+      <h2 class="font-bold text-primary-custom heading-accent">A short drive from Carlisle</h2>
+    </div>
+    <div class="map-frame" data-reveal>
       <iframe
+        title="Map showing Woodstyle Joinery at Wood Bank Farm, Brisco, Carlisle"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9184.100506198445!2d-2.9058588!3d54.8673699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb434ee10cfa99758!2sWoodstyle%20Joinery!5e0!3m2!1sen!2suk!4v1573475225953!5m2!1sen!2suk"
         width="100%"
         height="450"
@@ -80,28 +138,257 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
     </div>
   </section>
 
-  <!-- Call to Action -->
-    <section class="page-hero text-center py-12">
-      <div class="container py-12">
-      <h2 class="font-bold mb-6">Ready to Discuss Your Project?</h2>
-      <p class="lead mb-6 mx-auto" style="max-width: 560px">Call us or send a message today, and let's bring your dream build to life.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="tel:01228512303" class="btn btn-light btn-lg font-bold">
-          <i data-feather="phone" class="me-2"></i> Call 01228 512303
-        </a>
-        <a href="#contact-form" class="btn btn-outline-custom btn-lg font-bold">
-          Send a Message
-        </a>
-      </div>
+  <!-- Closing CTA — phone-led, so it complements the form rather than repeating it -->
+  <section class="section bg-primary-custom text-center text-white">
+    <div class="container" data-reveal>
+      <span class="hero-eyebrow">Prefer To Talk?</span>
+      <h2 class="mb-4 mt-2 font-bold" style="color: rgba(255,255,255,0.9)">Give us a call</h2>
+      <p class="lead mx-auto mb-6" style="max-width: 540px; color: rgba(255,255,255,0.85)">
+        Sometimes it's easier to talk it through. We're happy to chat about ideas, timescales and budgets — no obligation.
+      </p>
+      <a href="tel:01228512303" class="btn btn-light btn-lg font-bold">
+        <i data-feather="phone" class="mr-2" aria-hidden="true"></i> Call 01228 512303
+      </a>
     </div>
   </section>
 </Layout>
 
 <style>
-  .contact-icon {
-    width: 18px;
-    height: 18px;
+  /* ---- Contact panel ---- */
+  .contact-panel {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* ---- Details panel ---- */
+  .info-panel {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: clamp(2rem, 4vw, 3rem);
+    background:
+      radial-gradient(120% 130% at 100% 0%, rgba(168, 124, 79, 0.32), transparent 55%),
+      linear-gradient(160deg, var(--primary) 0%, var(--primary-darker) 100%);
+  }
+  /* Soft glow, bottom-left */
+  .info-panel::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: -140px;
+    bottom: -180px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+  }
+  .info-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .info-intro {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.98rem;
+    margin-bottom: 2rem;
+  }
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.95rem;
+  }
+  /* Text column: allow long values (e.g. the email) to wrap instead of overflowing */
+  .info-item > span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .info-badge {
     flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .info-badge :global(svg) {
+    width: 20px;
+    height: 20px;
+    stroke: #fff;
+  }
+  .info-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.2rem;
+  }
+  .info-value {
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+  }
+  .info-item a {
+    color: #fff;
+    text-underline-offset: 0.18em;
+  }
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---- Form side ---- */
+  .form-side {
+    padding: clamp(1.75rem, 4vw, 3rem);
+  }
+  .label-optional {
+    font-weight: 400;
+    color: var(--ink-muted);
+  }
+  .form-note {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+  }
+
+  /* Honeypot — kept in the DOM but out of sight */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  /* ---- Error alert ---- */
+  .form-error {
+    display: none;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius-sm);
+    background: #fbecea;
+    border: 1px solid #e6c4bf;
+    color: #8a3b2e;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+  .form-error.is-active {
+    display: flex;
+  }
+  .form-error :global(svg) {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* ---- Success state ---- */
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .form-success.is-active {
+    display: block;
+  }
+  .success-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    color: var(--primary);
+    background: rgba(85, 105, 86, 0.14);
+  }
+  .success-badge :global(svg) {
+    width: 30px;
+    height: 30px;
     stroke: var(--primary);
+    stroke-width: 2.5;
+  }
+
+  /* ---- Map ---- */
+  .map-frame {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    line-height: 0;
   }
 </style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const successEl = document.getElementById('form-success');
+  const errorEl = document.getElementById('form-error');
+  const resetBtn = document.getElementById('form-reset');
+
+  if (form && successEl && errorEl) {
+    const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const defaultLabel = submitBtn?.innerHTML ?? 'Send message';
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      errorEl.classList.remove('is-active');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (!response.ok) throw new Error('Form submission failed');
+
+        form.style.display = 'none';
+        successEl.classList.add('is-active');
+        if (window.feather) window.feather.replace();
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch {
+        errorEl.classList.add('is-active');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = defaultLabel;
+        }
+      }
+    });
+
+    // "Send another message" — bring the empty form back
+    resetBtn?.addEventListener('click', () => {
+      form.reset();
+      successEl.classList.remove('is-active');
+      form.style.display = '';
+      const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      if (submit) {
+        submit.disabled = false;
+        submit.innerHTML = defaultLabel;
+      }
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+</script>
