@@ -31,18 +31,18 @@ const faqs = [
   description="Bespoke joinery and woodwork crafted for Cumbrian homes since 1988. Kitchens, bedrooms, conservatories, garages and more. Call 01228 512303."
 >
     <!-- HERO -->
-    <section class="page-hero text-center py-5 py-lg-6">
-      <div class="container py-5" data-reveal>
+    <section class="page-hero py-12 text-center lg:py-20">
+      <div class="container py-12" data-reveal>
         <span class="hero-eyebrow">Est. 1988 · Carlisle, Cumbria</span>
-        <h1 class="display-4 fw-bold mb-4 mx-auto" style="max-width: 14ch">
+        <h1 class="display-4 mx-auto mb-6 font-bold" style="max-width: 14ch">
           Crafting Bespoke Woodwork Since 1988
         </h1>
-        <p class="lead mb-4 mx-auto" style="max-width: 640px">
+        <p class="lead mx-auto mb-6" style="max-width: 640px">
           Quality joinery for homes and gardens across Cumbria and beyond — designed around you, built to last.
         </p>
-        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-          <a href="contact" class="btn btn-light btn-lg fw-bold px-4">Get a Quote</a>
-          <a href="products" class="btn btn-outline-custom btn-lg fw-bold px-4">View Our Work</a>
+        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+          <a href="contact" class="btn btn-light btn-lg px-6 font-bold">Get a Quote</a>
+          <a href="products" class="btn btn-outline-custom btn-lg px-6 font-bold">View Our Work</a>
         </div>
       </div>
     </section>
@@ -50,25 +50,25 @@ const faqs = [
     <!-- ABOUT -->
     <section class="section bg-white">
       <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-md-6" data-reveal>
+        <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <div data-reveal>
             <span class="section-kicker">Since 1988</span>
-            <h2 class="fw-bold text-primary-custom heading-accent mb-4">Our Woodwork Story</h2>
-            <p class="fs-5">
+            <h2 class="mb-6 font-bold text-primary-custom heading-accent">Our Woodwork Story</h2>
+            <p class="text-xl">
               Formed in 1988 with a passion for joinery and woodwork, Woodstyle
               has become well established across Cumbria and beyond.
             </p>
             <blockquote class="home-quote">
               “Our work is a great source of pride — the love of what we do
               comes through in every project.”
-              <span class="d-block mt-3 fw-semibold">— Alan Dickinson</span>
+              <span class="mt-4 block font-semibold">— Alan Dickinson</span>
             </blockquote>
           </div>
-          <div class="col-md-6" data-reveal data-reveal-delay="1">
+          <div data-reveal data-reveal-delay="1">
             <img
               src="/images/home-image.png"
               alt="The Woodstyle Joinery workshop in Carlisle, Cumbria"
-              class="img-fluid rounded-4 shadow"
+              class="h-auto w-full rounded-2xl shadow-xl"
               loading="lazy"
             />
           </div>
@@ -76,145 +76,87 @@ const faqs = [
       </div>
     </section>
 
-    <!-- STATS -->
-    <section class="bg-cream-deep py-4 py-lg-5">
-      <div class="container">
-        <div class="stat-strip" data-reveal>
-          <div class="stat-item">
-            <span class="stat-num">35+</span>
-            <span class="stat-label">Years Crafting</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">500+</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Bespoke Work</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Skilled Joiners</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VALUES -->
-    <section class="section bg-light">
-      <div class="container">
-        <div class="text-center mb-5" data-reveal>
-          <span class="section-kicker">What Drives Us</span>
-          <h2 class="fw-bold text-primary-custom heading-accent">Our Core Values</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-sm-6 col-md-3" data-reveal>
-            <div class="value-card h-100 text-center p-4">
-              <div class="icon-badge mx-auto"><i data-feather="award" aria-hidden="true"></i></div>
-              <h5 class="fw-semibold">Honesty</h5>
-              <p class="mb-0 text-muted">Transparent pricing and clear communication</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-reveal data-reveal-delay="1">
-            <div class="value-card h-100 text-center p-4">
-              <div class="icon-badge mx-auto"><i data-feather="briefcase" aria-hidden="true"></i></div>
-              <h5 class="fw-semibold">Professionalism</h5>
-              <p class="mb-0 text-muted">Decades of combined experience</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-reveal data-reveal-delay="2">
-            <div class="value-card h-100 text-center p-4">
-              <div class="icon-badge mx-auto"><i data-feather="eye" aria-hidden="true"></i></div>
-              <h5 class="fw-semibold">Attention to Detail</h5>
-              <p class="mb-0 text-muted">Precision in every joint and finish</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-reveal data-reveal-delay="3">
-            <div class="value-card h-100 text-center p-4">
-              <div class="icon-badge mx-auto"><i data-feather="thumbs-up" aria-hidden="true"></i></div>
-              <h5 class="fw-semibold">Job Well Done</h5>
-              <p class="mb-0 text-muted">We stand by our work with pride</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Featured Products -->
-    <section class="section bg-white">
+    <section class="section bg-cream-deep">
       <div class="container">
-        <div class="text-center mb-5" data-reveal>
+        <div class="mb-12 text-center" data-reveal>
           <span class="section-kicker">Handcrafted For You</span>
-          <h2 class="fw-bold text-primary-custom heading-accent">Our Featured Products</h2>
-          <p class="text-muted fs-5 mt-3">
+          <h2 class="font-bold text-primary-custom heading-accent">Our Featured Products</h2>
+          <p class="mt-4 text-xl text-muted">
             Handcrafted, bespoke joinery tailored to your home and lifestyle
           </p>
         </div>
 
-        <div class="row g-4">
-          <!-- Product 1 -->
-          <div class="col-md-4" data-reveal>
-            <a href="products/kitchens" class="text-decoration-none">
-              <div class="product-card">
-                <img src="/images/products/kitchens/kitchen_6.jpg" alt="Bespoke kitchen by Woodstyle Joinery" loading="lazy" />
-                <div class="overlay"></div>
-                <div class="card-text">
-                  <h5 class="fw-bold">Bespoke Kitchens</h5>
-                  <span>View Gallery →</span>
-                </div>
+        <div class="featured-grid">
+          <!-- Feature: Kitchens -->
+          <a href="products/kitchens" class="feat-feature no-underline" data-reveal>
+            <div class="product-card product-card--feature">
+              <img src="/images/products/kitchens/kitchen_6.jpg" alt="Bespoke kitchen by Woodstyle Joinery" loading="lazy" />
+              <div class="overlay"></div>
+              <div class="card-text">
+                <h5 class="font-bold">Bespoke Kitchens</h5>
+                <span>View Gallery →</span>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
 
-          <!-- Product 2 -->
-          <div class="col-md-4" data-reveal data-reveal-delay="1">
-            <a href="products/bedrooms" class="text-decoration-none">
-              <div class="product-card">
-                <img src="/images/products/bedrooms/bedroom_1.jpg" alt="Fitted bedroom and dressing room joinery" loading="lazy" />
-                <div class="overlay"></div>
-                <div class="card-text">
-                  <h5 class="fw-bold">Bedrooms & Dressing Rooms</h5>
-                  <span>View Gallery →</span>
-                </div>
+          <!-- Bedrooms -->
+          <a href="products/bedrooms" class="feat-side-top no-underline" data-reveal data-reveal-delay="1">
+            <div class="product-card">
+              <img src="/images/products/bedrooms/bedroom_1.jpg" alt="Fitted bedroom and dressing room joinery" loading="lazy" />
+              <div class="overlay"></div>
+              <div class="card-text">
+                <h5 class="font-bold">Bedrooms & Dressing Rooms</h5>
+                <span>View Gallery →</span>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
 
-          <!-- Product 3 -->
-          <div class="col-md-4" data-reveal data-reveal-delay="2">
-            <a href="/products/garages" class="text-decoration-none">
-              <div class="product-card">
-                <img src="/images/products/garages/garage_14.jpg" alt="Bespoke timber garage and workshop" loading="lazy" />
-                <div class="overlay"></div>
-                <div class="card-text">
-                  <h5 class="fw-bold">Garages & Workshops</h5>
-                  <span>View Gallery →</span>
-                </div>
+          <!-- Garages -->
+          <a href="products/garages" class="feat-side-bot no-underline" data-reveal data-reveal-delay="2">
+            <div class="product-card">
+              <img src="/images/products/garages/garage_14.jpg" alt="Bespoke timber garage and workshop" loading="lazy" />
+              <div class="overlay"></div>
+              <div class="card-text">
+                <h5 class="font-bold">Garages & Workshops</h5>
+                <span>View Gallery →</span>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
+
+          <!-- Conservatories (wide) -->
+          <a href="products/conservatories" class="feat-wide no-underline" data-reveal data-reveal-delay="3">
+            <div class="product-card">
+              <img src="/images/products/conservatories/conservatory_1.jpg" alt="Bespoke conservatory and orangery joinery" loading="lazy" />
+              <div class="overlay"></div>
+              <div class="card-text">
+                <h5 class="font-bold">Conservatories & Orangeries</h5>
+                <span>View Gallery →</span>
+              </div>
+            </div>
+          </a>
         </div>
 
-        <div class="text-center mt-5" data-reveal>
-          <a href="products" class="btn btn-secondary-custom btn-lg fw-bold px-5">View All Products</a>
+        <div class="mt-12 text-center" data-reveal>
+          <a href="products" class="btn btn-secondary-custom btn-lg px-12 font-bold">View All Products</a>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="bg-primary-custom text-white text-center section">
+    <section class="section bg-primary-custom text-center text-white">
       <div class="container" data-reveal>
         <span class="hero-eyebrow">Free, No-Obligation Quote</span>
-        <h2 class="fw-bold mb-3 mt-2 text-white">Ready to Start Your Project?</h2>
-        <p class="lead mb-4 mx-auto" style="max-width: 540px; color: rgba(255,255,255,0.85)">
+        <h2 class="mb-4 mt-2 font-bold text-white">Ready to Start Your Project?</h2>
+        <p class="lead mx-auto mb-6" style="max-width: 540px; color: rgba(255,255,255,0.85)">
           Contact us today for a free consultation and quote.
         </p>
-        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-          <a href="contact" class="btn btn-light btn-lg fw-bold">
+        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+          <a href="contact" class="btn btn-light btn-lg font-bold">
             Get in Touch
           </a>
-          <a href="tel:01228512303" class="btn btn-outline-custom btn-lg fw-bold">
-            <i data-feather="phone" class="me-2" aria-hidden="true"></i> 01228 512303
+          <a href="tel:01228512303" class="btn btn-outline-custom btn-lg font-bold">
+            <i data-feather="phone" class="mr-2" aria-hidden="true"></i> 01228 512303
           </a>
         </div>
       </div>
@@ -223,6 +165,31 @@ const faqs = [
     <FAQ items={faqs} uid="home-faq" />
 
     <style>
+      /* Editorial featured-products layout */
+      .featured-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 992px) {
+        .featured-grid {
+          grid-template-columns: 1.45fr 1fr;
+          grid-template-rows: 230px 230px;
+          grid-auto-rows: 280px;
+          grid-template-areas:
+            "feature side-top"
+            "feature side-bottom"
+            "wide    wide";
+        }
+        .featured-grid .feat-feature  { grid-area: feature; }
+        .featured-grid .feat-side-top { grid-area: side-top; }
+        .featured-grid .feat-side-bot { grid-area: side-bottom; }
+        .featured-grid .feat-wide     { grid-area: wide; }
+        .featured-grid .product-card  { height: 100%; }
+        .product-card--feature .card-text { padding: 2rem; }
+        .product-card--feature .card-text h5 { font-size: 1.9rem; }
+      }
+
       .home-quote {
         margin-top: 1.75rem;
         padding: 1.25rem 1.5rem;

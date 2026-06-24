@@ -43,6 +43,8 @@
    ============================================================ */
 html {
   scroll-behavior: smooth;
+  /* Offset in-page anchor jumps so targets clear the sticky navbar */
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -68,6 +70,21 @@ h1, h2, h3, h4, h5, h6,
 .display-5 { font-size: clamp(2.2rem, 4.4vw, 3.3rem); font-weight: 600; }
 .display-6 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 600; }
 h2 { font-size: clamp(1.7rem, 3vw, 2.35rem); }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.18rem; }
+h6 { font-size: 1rem; }
+
+/* Layout container (replaces Bootstrap's .container) */
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1140px;
+}
+@media (min-width: 1400px) {
+  .container { max-width: 1320px; }
+}
 
 p, li, .lead {
   line-height: 1.7;
@@ -131,9 +148,20 @@ a {
    Buttons
    ============================================================ */
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
   border-radius: var(--radius-sm);
   font-weight: 600;
   letter-spacing: 0.01em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
   transition: background-color .25s var(--ease), border-color .25s var(--ease),
               color .25s var(--ease), transform .2s var(--ease), box-shadow .25s var(--ease);
 }
@@ -515,6 +543,8 @@ a {
    Forms
    ============================================================ */
 .form-control {
+  display: block;
+  width: 100%;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 0.7rem 0.95rem;

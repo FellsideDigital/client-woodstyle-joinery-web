@@ -1,27 +1,27 @@
 ---
 // src/components/Footer.astro
 ---
-<footer class="site-footer pt-5">
+<footer class="site-footer pt-12">
   <div class="container">
 
-    <div class="row g-5 align-items-start">
+    <div class="grid grid-cols-1 items-start gap-12 md:grid-cols-2 lg:grid-cols-4">
 
       <!-- Brand -->
-      <div class="col-lg-3 col-md-6">
-        <img src="/images/site-logo.png" alt="Woodstyle Joinery Logo" height="44" class="mb-3 footer-logo" />
+      <div>
+        <img src="/images/site-logo.png" alt="Woodstyle Joinery Logo" height="44" class="footer-logo mb-4" />
         <p class="footer-tagline mb-0">Bespoke joinery, handcrafted in Cumbria since 1988.</p>
       </div>
 
       <!-- Location -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-heading mb-3">Location</h5>
+      <div>
+        <h5 class="footer-heading mb-4">Location</h5>
 
         <address class="mb-0 not-italic">
           <a
             href="https://www.google.com/maps/search/?api=1&query=Wood+Bank+Farm+Brisco+Carlisle+CA4+0QP"
             target="_blank"
             rel="noopener"
-            class="footer-link d-inline-flex align-items-start gap-2"
+            class="footer-link inline-flex items-start gap-2"
           >
             <i data-feather="map-pin" class="footer-icon"></i>
             <span>
@@ -34,13 +34,13 @@
       </div>
 
       <!-- Contact -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-heading mb-3">Contact</h5>
+      <div>
+        <h5 class="footer-heading mb-4">Contact</h5>
 
         <p class="mb-2">
           <a
             href="tel:+441228512303"
-            class="footer-link d-inline-flex align-items-center gap-2"
+            class="footer-link inline-flex items-center gap-2"
           >
             <i data-feather="phone" class="footer-icon"></i>
             01228 512303
@@ -49,28 +49,28 @@
 
         <p class="mb-0">
           <a
-            href="mailto:info@woodstylejoinery.co.uk"
-            class="footer-link d-inline-flex align-items-center gap-2"
+            href="mailto:joiners@woodstylejoinery.co.uk"
+            class="footer-link inline-flex items-center gap-2"
           >
             <i data-feather="mail" class="footer-icon"></i>
-            info@woodstylejoinery.co.uk
+            joiners@woodstylejoinery.co.uk
           </a>
         </p>
       </div>
 
       <!-- Hours -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="footer-heading mb-3">Workshop Hours</h5>
-        <p class="mb-1 d-flex justify-content-between footer-hours"><span>Mon–Fri</span><span>9am – 5pm</span></p>
-        <p class="mb-1 d-flex justify-content-between footer-hours"><span>Saturday</span><span>10am – 2pm</span></p>
-        <p class="mb-0 d-flex justify-content-between footer-hours"><span>Sunday</span><span>Closed</span></p>
+      <div>
+        <h5 class="footer-heading mb-4">Workshop Hours</h5>
+        <p class="footer-hours mb-1 flex justify-between"><span>Mon–Fri</span><span>9am – 5pm</span></p>
+        <p class="footer-hours mb-1 flex justify-between"><span>Saturday</span><span>8am – 12pm</span></p>
+        <p class="footer-hours mb-0 flex justify-between"><span>Sunday</span><span>Closed</span></p>
       </div>
 
     </div>
 
-    <div class="footer-divider mt-5 pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 text-center">
-      <span class="small">© 2026 Woodstyle Joinery. All rights reserved.</span>
-      <span class="small footer-credit">Established Craft · 35+ Years of Woodwork</span>
+    <div class="footer-divider mt-12 flex flex-col items-center gap-2 pt-6 text-center sm:flex-row sm:justify-between">
+      <span class="text-sm">© 2026 Woodstyle Joinery. All rights reserved.</span>
+      <span class="footer-credit text-sm">Established Craft · 35+ Years of Woodwork</span>
     </div>
 
   </div>

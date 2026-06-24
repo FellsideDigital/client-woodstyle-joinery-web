@@ -35,10 +35,10 @@ const products = [
 <BaseLayout title={title} description={description}>
 
   <!-- Hero Section -->
-  <section class="page-hero text-center py-5 mb-5">
-    <div class="container py-5">
+  <section class="page-hero text-center py-12 mb-12">
+    <div class="container py-12">
       <span class="hero-eyebrow">Our Products</span>
-      <h1 class="display-5 fw-bold">Bespoke Joinery, Built Around You</h1>
+      <h1 class="display-5 font-bold">Bespoke Joinery, Built Around You</h1>
       <p class="lead mx-auto" style="max-width: 640px">Browse our range of handcrafted joinery — every piece designed and built to fit your home, in Carlisle and across Cumbria.</p>
     </div>
   </section>
@@ -46,19 +46,19 @@ const products = [
   <!-- Products Grid -->
   <section class="section bg-white">
     <div class="container">
-      <div class="text-center mb-5" data-reveal>
+      <div class="text-center mb-12" data-reveal>
         <span class="section-kicker">The Full Range</span>
-        <h2 class="fw-bold text-primary-custom heading-accent">Explore Our Joinery</h2>
+        <h2 class="font-bold text-primary-custom heading-accent">Explore Our Joinery</h2>
       </div>
-      <div class="row g-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product, i) => (
-          <div class="col-sm-6 col-lg-4" data-reveal data-reveal-delay={(i % 3).toString()}>
-            <a href={product.href} class="text-decoration-none">
+          <div data-reveal data-reveal-delay={(i % 3).toString()}>
+            <a href={product.href} class="no-underline">
               <div class="product-card">
                 <img src={product.image} alt={product.alt} loading="lazy" />
                 <div class="overlay"></div>
                 <div class="card-text">
-                  <h5 class="fw-bold">{product.title}</h5>
+                  <h5 class="font-bold">{product.title}</h5>
                   <span>View Gallery →</span>
                 </div>
               </div>

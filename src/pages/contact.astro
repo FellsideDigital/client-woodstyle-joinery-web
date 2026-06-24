@@ -8,29 +8,29 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 
 <Layout title={title} description={description}>
   <!-- Hero Section -->
-  <section class="page-hero text-center py-5 mb-5">
-    <div class="container py-4" data-reveal>
+  <section class="page-hero text-center py-12 mb-12">
+    <div class="container py-6" data-reveal>
       <span class="hero-eyebrow">Get In Touch</span>
-      <h1 class="display-5 fw-bold mb-3">Let's Talk About Your Project</h1>
+      <h1 class="display-5 font-bold mb-4">Let's Talk About Your Project</h1>
       <p class="lead mx-auto mb-0" style="max-width: 640px">Get in touch with Woodstyle Joinery for a free, no-obligation quote on bespoke joinery in Carlisle, Cumbria.</p>
     </div>
   </section>
 
-  <section class="container mb-5">
-    <div class="row g-5 align-items-start">
+  <section class="container mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
       <!-- Contact Info -->
-      <div class="col-md-4" data-reveal>
-        <div class="sidebar-card p-4 rounded-4 shadow-sm h-100">
-          <h5 class="fw-bold text-primary-custom mb-4">Our Details</h5>
-          <p class="mb-3 d-flex align-items-start gap-2">
+      <div class="md:col-span-4" data-reveal>
+        <div class="sidebar-card p-6 rounded-lg shadow-sm h-full">
+          <h5 class="font-bold text-primary-custom mb-6">Our Details</h5>
+          <p class="mb-4 flex items-start gap-2">
             <i data-feather="phone" class="contact-icon mt-1"></i>
-            <a href="tel:01228512303" class="text-decoration-none text-dark fw-medium">01228 512303</a>
+            <a href="tel:01228512303" class="no-underline text-ink font-medium">01228 512303</a>
           </p>
-          <p class="mb-3 d-flex align-items-start gap-2">
+          <p class="mb-4 flex items-start gap-2">
             <i data-feather="mail" class="contact-icon mt-1"></i>
-            <a href="mailto:info@woodstylejoinery.co.uk" class="text-decoration-none text-dark fw-medium">info@woodstylejoinery.co.uk</a>
+            <a href="mailto:joiners@woodstylejoinery.co.uk" class="no-underline text-ink font-medium">joiners@woodstylejoinery.co.uk</a>
           </p>
-          <p class="mb-0 d-flex align-items-start gap-2">
+          <p class="mb-0 flex items-start gap-2">
             <i data-feather="map-pin" class="contact-icon mt-1"></i>
             <span>
               Wood Bank Farm, Brisco<br />
@@ -42,22 +42,22 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
       </div>
 
       <!-- Contact Form -->
-      <div class="col-md-8" data-reveal data-reveal-delay="1">
-        <form id="contact-form" class="sidebar-card p-4 p-md-5 rounded-4 shadow-sm" action="https://formspree.io/f/maypnvja" method="POST">
-          <h5 class="fw-bold text-primary-custom mb-4">Send Us a Message</h5>
-          <div class="mb-3">
+      <div class="md:col-span-8" data-reveal data-reveal-delay="1">
+        <form id="contact-form" class="sidebar-card p-6 md:p-12 rounded-lg shadow-sm" action="https://formspree.io/f/maypnvja" method="POST">
+          <h5 class="font-bold text-primary-custom mb-6">Send Us a Message</h5>
+          <div class="mb-4">
             <label for="name" class="form-label">Your Name</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" autocomplete="name" required />
           </div>
-          <div class="mb-3">
+          <div class="mb-4">
             <label for="email" class="form-label">Email Address</label>
             <input type="email" class="form-control" id="email" name="_replyto" placeholder="you@example.com" autocomplete="email" inputmode="email" required />
           </div>
-          <div class="mb-3">
+          <div class="mb-4">
             <label for="message" class="form-label">Message</label>
             <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-secondary-custom btn-lg fw-bold">
+          <button type="submit" class="btn btn-secondary-custom btn-lg font-bold">
             Send Message
           </button>
         </form>
@@ -66,7 +66,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
   </section>
 
   <!-- Google Map -->
-  <section class="mb-5">
+  <section class="mb-12">
     <div class="container rounded overflow-hidden shadow-sm">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9184.100506198445!2d-2.9058588!3d54.8673699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb434ee10cfa99758!2sWoodstyle%20Joinery!5e0!3m2!1sen!2suk!4v1573475225953!5m2!1sen!2suk"
@@ -81,15 +81,15 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
   </section>
 
   <!-- Call to Action -->
-    <section class="page-hero text-center py-5">
-      <div class="container py-5">
-      <h2 class="fw-bold mb-4">Ready to Discuss Your Project?</h2>
-      <p class="lead mb-4 mx-auto" style="max-width: 560px">Call us or send a message today, and let's bring your dream build to life.</p>
-      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-        <a href="tel:01228512303" class="btn btn-light btn-lg fw-bold">
+    <section class="page-hero text-center py-12">
+      <div class="container py-12">
+      <h2 class="font-bold mb-6">Ready to Discuss Your Project?</h2>
+      <p class="lead mb-6 mx-auto" style="max-width: 560px">Call us or send a message today, and let's bring your dream build to life.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:01228512303" class="btn btn-light btn-lg font-bold">
           <i data-feather="phone" class="me-2"></i> Call 01228 512303
         </a>
-        <a href="#contact-form" class="btn btn-outline-custom btn-lg fw-bold">
+        <a href="#contact-form" class="btn btn-outline-custom btn-lg font-bold">
           Send a Message
         </a>
       </div>

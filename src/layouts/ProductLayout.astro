@@ -8,10 +8,10 @@ const { title, heading = title, description, images, faqs } = Astro.props;
 
 <Layout title={title} description={description}>
   <!-- Hero -->
-  <section class="page-hero text-center py-5 mb-5">
-    <div class="container py-4" data-reveal>
+  <section class="page-hero text-center py-12 mb-12">
+    <div class="container py-6" data-reveal>
       <span class="hero-eyebrow">Bespoke Joinery · Carlisle</span>
-      <h1 class="display-5 fw-bold mb-3">{heading}</h1>
+      <h1 class="display-5 font-bold mb-4">{heading}</h1>
       <p class="lead mx-auto mb-0" style="max-width: 640px">{description}</p>
     </div>
   </section>
@@ -21,9 +21,9 @@ const { title, heading = title, description, images, faqs } = Astro.props;
       <slot />
     </div>
 
-    <div class="text-center mt-5" data-reveal>
+    <div class="text-center mt-12" data-reveal>
       <span class="section-kicker">Gallery of Our Work</span>
-      <h2 class="fw-bold text-primary-custom heading-accent">{heading} Gallery</h2>
+      <h2 class="font-bold text-primary-custom heading-accent">{heading} Gallery</h2>
     </div>
     <div class="gallery-wrapper" data-reveal>
       <ImageGallery images={images} />
@@ -31,13 +31,13 @@ const { title, heading = title, description, images, faqs } = Astro.props;
   </section>
 
   <!-- CTA band -->
-  <section class="bg-cream-deep text-center section mt-5">
+  <section class="bg-cream-deep text-center section mt-12">
     <div class="container" data-reveal>
-      <h2 class="fw-bold text-primary-custom mb-3">Interested in {heading}?</h2>
-      <p class="lead mx-auto mb-4" style="max-width: 520px">
+      <h2 class="font-bold text-primary-custom mb-4">Interested in {heading}?</h2>
+      <p class="lead mx-auto mb-6" style="max-width: 520px">
         Tell us about your project and we’ll prepare a free, no-obligation quote.
       </p>
-      <a href="/contact" class="btn btn-secondary-custom btn-lg fw-bold">
+      <a href="/contact" class="btn btn-secondary-custom btn-lg font-bold">
         Contact Us About {heading}
       </a>
     </div>
