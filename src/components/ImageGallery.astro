@@ -134,9 +134,9 @@ const { images } = Astro.props; // [{ src, thumb?, alt }]
   font-weight: 700;
 }
 
-/* Push arrows slightly outside the gallery */
-.swiper-button-prev { left: -14px; }
-.swiper-button-next { right: -14px; }
+/* Keep arrows inside the gallery so they never leak off the page */
+.swiper-button-prev { left: 10px; }
+.swiper-button-next { right: 10px; }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {

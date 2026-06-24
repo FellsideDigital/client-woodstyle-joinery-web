@@ -144,6 +144,14 @@ a {
     linear-gradient(155deg, var(--primary) 0%, var(--primary-darker) 100%);
 }
 
+/* Warm wood-tone CTA band */
+.bg-accent-custom {
+  position: relative;
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(255, 255, 255, 0.12), transparent 55%),
+    linear-gradient(155deg, var(--accent) 0%, var(--accent-dark) 100%);
+}
+
 /* ============================================================
    Buttons
    ============================================================ */
