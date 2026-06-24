@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "./main.css";
+
+/* ============================================================
+   Brand design tokens exposed to Tailwind utilities
+   (bg-primary, text-ink, font-heading, rounded-md, etc.)
+   These mirror the CSS custom properties in main.css.
+   ============================================================ */
+@theme {
+  --color-primary: #556956;
+  --color-primary-dark: #3d4d3e;
+  --color-primary-darker: #2f3b30;
+  --color-secondary: #8b9d83;
+  --color-accent: #a87c4f;
+  --color-accent-dark: #8c6539;
+  --color-accent-soft: #c79a6a;
+  --color-cream: #f8f6f0;
+  --color-cream-deep: #f1ede2;
+  --color-surface: #ffffff;
+  --color-ink: #2b3328;
+  --color-ink-muted: #5e6a5c;
+  --color-border: #e4e0d4;
+
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+}
