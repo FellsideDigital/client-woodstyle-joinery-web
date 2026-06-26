@@ -68,7 +68,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
         <div id="form-success" class="form-success" role="status" aria-live="polite">
           <span class="success-badge"><i data-feather="check" aria-hidden="true"></i></span>
           <h2 class="font-bold mb-2">Message sent</h2>
-          <p class="text-muted mb-6">Thanks for getting in touch — we'll reply within one working day. If it's urgent, give us a call on 01228 512303.</p>
+          <p class="text-muted mb-6">Thanks for getting in touch. We'll get back to you within a working day. If it's urgent, give us a call on 01228 512303.</p>
           <button type="button" id="form-reset" class="btn btn-secondary-custom font-bold">Send another message</button>
         </div>
 
@@ -81,9 +81,9 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
           <span class="section-kicker">Free Quote</span>
           <h2 class="font-bold text-primary-custom mb-6">Send us a message</h2>
 
-          <!-- Spam honeypot — leave blank -->
+          <!-- Spam honeypot: leave blank -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
-          <input type="hidden" name="_subject" value="New enquiry — Woodstyle Joinery website" />
+          <input type="hidden" name="_subject" value="New enquiry from the Woodstyle Joinery website" />
 
           <div id="form-error" class="form-error" role="alert">
             <i data-feather="alert-triangle" aria-hidden="true"></i>
@@ -108,7 +108,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 
           <div class="mb-6">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us a little about your project — rooms, timescale, anything that helps us picture it." required></textarea>
+            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell us a bit about your project: rooms, timescale, anything that helps us picture it." required></textarea>
           </div>
 
           <button type="submit" class="btn btn-secondary-custom btn-lg font-bold">Send message</button>
@@ -138,13 +138,13 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
     </div>
   </section>
 
-  <!-- Closing CTA — phone-led, so it complements the form rather than repeating it -->
+  <!-- Closing CTA: phone-led, so it complements the form rather than repeating it -->
   <section class="section bg-primary-custom text-center text-white">
     <div class="container" data-reveal>
       <span class="hero-eyebrow">Prefer To Talk?</span>
       <h2 class="mb-4 mt-2 font-bold" style="color: rgba(255,255,255,0.9)">Give us a call</h2>
       <p class="lead mx-auto mb-6" style="max-width: 540px; color: rgba(255,255,255,0.85)">
-        Sometimes it's easier to talk it through. We're happy to chat about ideas, timescales and budgets — no obligation.
+        Sometimes it's easier to talk it through. We're happy to chat through ideas, timescales and budgets, no obligation.
       </p>
       <a href="tel:01228512303" class="btn btn-light btn-lg font-bold">
         <i data-feather="phone" class="mr-2" aria-hidden="true"></i> Call 01228 512303
@@ -267,7 +267,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
     color: var(--ink-muted);
   }
 
-  /* Honeypot — kept in the DOM but out of sight */
+  /* Honeypot: kept in the DOM but out of sight */
   .hp-field {
     position: absolute;
     left: -9999px;
@@ -378,7 +378,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
       }
     });
 
-    // "Send another message" — bring the empty form back
+    // "Send another message": bring the empty form back
     resetBtn?.addEventListener('click', () => {
       form.reset();
       successEl.classList.remove('is-active');

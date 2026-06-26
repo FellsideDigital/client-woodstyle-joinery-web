@@ -228,7 +228,7 @@ a {
   box-shadow: var(--shadow-md);
 }
 
-/* Accent button — warm wood tone for high-emphasis CTAs */
+/* Accent button: warm wood tone for high-emphasis CTAs */
 .btn-accent {
   background-color: var(--accent);
   border: 1px solid var(--accent);

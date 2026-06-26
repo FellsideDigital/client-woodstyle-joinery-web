@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = "About Woodstyle Joinery | Bespoke Joiners in Carlisle";
-const description = "Learn about Woodstyle Joinery — handcrafting bespoke woodwork across Cumbria since 1988. Quality craftsmanship with a personal touch.";
+const description = "Woodstyle Joinery is a family-run workshop near Carlisle, handcrafting bespoke woodwork across Cumbria since 1988.";
 ---
 
 <Layout title={title} description={description}>
@@ -11,7 +11,7 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
     <div class="container py-12" data-reveal>
       <span class="hero-eyebrow">Our Story</span>
       <h1 class="display-5 font-bold">About Woodstyle Joinery</h1>
-      <p class="lead mx-auto" style="max-width: 640px">Handcrafting bespoke woodwork across Cumbria since 1988 — quality craftsmanship with a personal touch.</p>
+      <p class="lead mx-auto" style="max-width: 640px">A family-run joinery workshop near Carlisle, handcrafting bespoke woodwork across Cumbria since 1988.</p>
     </div>
   </section>
 
@@ -23,45 +23,46 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
         <span class="section-kicker">Since 1988</span>
         <h2 class="font-bold text-primary-custom heading-accent mb-6">Our Story</h2>
         <p class="text-xl mb-6">
-          Woodstyle Joinery has been handcrafting high-quality woodwork for the Cumbrian community since 1988. 
-          What started as a passion for beautifully crafted pieces for homes has grown into a full-service business, 
-          designing custom woodwork for both interiors and exteriors.
+          We've been crafting woodwork for homes across Cumbria since 1988. What began as one
+          joiner with a workshop and a love of the trade has grown into a trusted family team,
+          making bespoke pieces for inside the home and out in the garden.
         </p>
         <p class="text-xl mb-6">
-          We take pride in every piece we create, whether large or small. Each project receives the same attention to detail, 
-          quality craftsmanship, and outstanding customer service.
+          Big job or small, every piece gets the same care and attention. We don't cut corners,
+          and we treat every project as if it were going into our own home.
         </p>
         <p class="text-xl mb-6">
-          Every piece is fully customizable in wood type, style, stain, paint, and detailing. We have a large portfolio 
-          to inspire your selection, or we can work with you to create a completely bespoke design.
+          Everything is made to order, so you choose the timber, the style, the finish and all
+          the little details. Have a look through our work for inspiration, or come to us with
+          your own ideas and we'll bring them to life.
         </p>
         <p class="text-xl mb-6">
-          If you don’t see the piece you envisioned, let us know! We love crafting custom designs for your home. 
-          Call us today at <a href="tel:01228512303" class="text-primary-custom font-bold">01228 512303</a> with any questions.
+          Can't see quite what you're after? Just ask. We're always happy to take on something
+          new. Give us a call on <a href="tel:01228512303" class="text-primary-custom font-bold">01228 512303</a> and we'll have a chat.
         </p>
       </div>
 
       <!-- Sidebar -->
       <div data-reveal data-reveal-delay="1">
-        <!-- Impact Box -->
+        <!-- Visit / Contact Box -->
         <div class="sidebar-card mb-6 p-6 rounded-lg shadow-sm">
-          <h5 class="font-bold text-primary-custom mb-4">Our Impact</h5>
-          <ul class="list-none pl-0 mb-0 text-base impact-list">
-            <li class="mb-4 flex items-center gap-4">
-              <i data-feather="tool" class="impact-icon"></i>
-              <span><strong>35+</strong> Years of Craftsmanship</span>
+          <h5 class="font-bold text-primary-custom mb-4">Pop In or Get in Touch</h5>
+          <ul class="list-none pl-0 mb-0 text-base contact-list">
+            <li class="mb-4 flex items-start gap-3">
+              <i data-feather="phone" class="contact-icon"></i>
+              <a href="tel:01228512303" class="contact-link">01228 512303</a>
             </li>
-            <li class="mb-4 flex items-center gap-4">
-              <i data-feather="home" class="impact-icon"></i>
-              <span><strong>500+</strong> Completed Projects</span>
+            <li class="mb-4 flex items-start gap-3">
+              <i data-feather="mail" class="contact-icon"></i>
+              <a href="mailto:joiners@woodstylejoinery.co.uk" class="contact-link">joiners@woodstylejoinery.co.uk</a>
             </li>
-            <li class="mb-4 flex items-center gap-4">
-              <i data-feather="star" class="impact-icon"></i>
-              <span><strong>100%</strong> Customer Satisfaction</span>
+            <li class="mb-4 flex items-start gap-3">
+              <i data-feather="map-pin" class="contact-icon"></i>
+              <span>Wood Bank Farm, Brisco<br />Carlisle, Cumbria CA4 0QP</span>
             </li>
-            <li class="mb-0 flex items-center gap-4">
-              <i data-feather="users" class="impact-icon"></i>
-              <span><strong>10+</strong> Skilled Joiners</span>
+            <li class="mb-0 flex items-start gap-3">
+              <i data-feather="clock" class="contact-icon"></i>
+              <span>Mon–Fri&nbsp;&nbsp;9am – 5pm</span>
             </li>
           </ul>
         </div>
@@ -98,18 +99,26 @@ const description = "Learn about Woodstyle Joinery — handcrafting bespoke wood
   </section>
 
   <style>
-    .impact-icon {
-      width: 20px;
-      height: 20px;
+    .contact-icon {
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
+      margin-top: 4px;
       stroke: var(--primary);
       background: rgba(85, 105, 86, 0.1);
       border-radius: 8px;
-      padding: 8px;
+      padding: 7px;
       box-sizing: content-box;
     }
-    .impact-list strong {
-      color: var(--ink);
+    .contact-link {
+      color: var(--ink-muted);
+      text-decoration: none;
+      font-weight: 500;
+      word-break: break-word;
+      transition: color 0.2s var(--ease);
+    }
+    .contact-link:hover {
+      color: var(--primary);
     }
     .sidebar-link {
       color: var(--ink-muted);

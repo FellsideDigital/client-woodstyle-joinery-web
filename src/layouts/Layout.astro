@@ -76,7 +76,7 @@ const schema = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImageURL} />
-    <meta property="og:image:alt" content="Woodstyle Joinery — bespoke woodwork in Carlisle, Cumbria" />
+    <meta property="og:image:alt" content="Woodstyle Joinery, bespoke woodwork in Carlisle, Cumbria" />
     <meta property="og:locale" content="en_GB" />
 
     <!-- Twitter Card -->
@@ -107,7 +107,7 @@ const schema = {
       document.addEventListener('DOMContentLoaded', () => {
         if (window.feather) feather.replace();
 
-        // Scroll reveal — opt-in via [data-reveal], disabled for reduced motion
+        // Scroll reveal: opt-in via [data-reveal], disabled for reduced motion
         const targets = document.querySelectorAll('[data-reveal]');
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reduce || !('IntersectionObserver' in window)) {
