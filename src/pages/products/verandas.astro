@@ -1,0 +1,51 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Verandas Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handcrafted timber and oak-framed verandas in Carlisle, Cumbria. Enjoy your garden in the dry with a covered veranda built to suit your home and outdoor space.";
+
+const faqs = [
+  {
+    question: "What is the difference between a veranda and a porch?",
+    answer: "A porch shelters your entrance door, while a veranda is a longer covered area running along the side or back of the house for sitting out and enjoying the garden. We build both, matched to your home."
+  },
+  {
+    question: "Will a veranda keep me dry in the rain?",
+    answer: "Yes. We roof our verandas to shed the weather, so you get a genuinely usable covered space rather than just shade. Add side screens and you can sit out in all but the worst of it."
+  },
+  {
+    question: "Can I add lighting and power to a veranda?",
+    answer: "We build in provision for lighting and power runs so you can use the space in the evenings. Final electrical connections are best left to a qualified electrician, and we plan the layout to suit."
+  },
+  {
+    question: "How do I get a quote for a veranda in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form to arrange a free, no-obligation consultation. We will take a look at the space and prepare a design and quote to suit your home."
+  }
+];
+
+const images = [
+  { src: "/images/products/verandas/4295f66f-eef6-4652-a46d-9516afd6baba.jpg", alt: "Handcrafted timber veranda in Carlisle, Cumbria", caption: "Timber Veranda" },
+  { src: "/images/products/verandas/5be79d8a-b8d4-4164-af88-a2a99a2ed09a.jpg", alt: "Handcrafted timber veranda in Carlisle, Cumbria", caption: "Oak-Framed Veranda" },
+  { src: "/images/products/verandas/9f44b5d8-9d73-44f6-806a-b1f857b055bd.jpg", alt: "Handcrafted timber veranda in Carlisle, Cumbria", caption: "Covered Veranda" },
+  { src: "/images/products/verandas/ae1cdcc1-6ee8-4555-a891-a3e6de9c4a90.jpg", alt: "Handcrafted timber veranda in Carlisle, Cumbria", caption: "Decked Veranda" },
+];
+---
+
+<ProductLayout {title} heading="Verandas" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A veranda lets you enjoy the garden even when the Cumbrian weather isn't playing ball. It gives you a covered, sheltered spot along the back of the house to sit out, eat, or just watch the rain from the dry.</p>
+
+    <p>We build them from solid timber and oak framing, tied properly into the house and roofed to keep the weather off. Add lighting, a decked floor, or side screens and you've got an outdoor room you'll use far more of the year than you'd think.</p>
+
+    <p>Whether you want somewhere shaded to sit in summer or a dry route along the back of the house, we'll build a veranda to suit. Give us a call on <strong>01228 512303</strong> to talk it over.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Timber and oak-framed verandas</li>
+      <li>Covered, sheltered space along your home</li>
+      <li>Optional lighting, decking, and side screens</li>
+      <li>Roofing that keeps the weather off</li>
+      <li>Tied properly into the house and built to last</li>
+    </ul>
+  </div>
+</ProductLayout>

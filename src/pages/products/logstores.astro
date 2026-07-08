@@ -1,0 +1,56 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bespoke Logstores Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handmade timber log stores in Carlisle, Cumbria. Built to keep your firewood dry and seasoned, with slatted sides for airflow and sizes to suit any garden.";
+
+const faqs = [
+  {
+    question: "What size log store do I need?",
+    answer: "It depends how much wood you burn. A single bay suits an occasional fire, while a double or triple bay holds enough to season a full winter's supply. We'll help you work out the right size for your garden and your burning habits."
+  },
+  {
+    question: "Why do your log stores have slatted sides?",
+    answer: "Air movement is what seasons firewood. Slatted sides let the breeze pass through the stack so the logs dry out and are ready to burn, rather than sitting damp and going mouldy behind a solid wall."
+  },
+  {
+    question: "Can you match a log store to my other outbuildings?",
+    answer: "Yes. We can match the timber, the roof covering, and the finish to your shed, fencing, or house so it looks like it belongs rather than an afterthought."
+  },
+  {
+    question: "How do I get a quote for a log store in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form. Let us know roughly how much wood you need to store and where it will go, and we will prepare a free, no-obligation quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/logstores/1c3c77d8-c530-4377-b793-057d4bafac52.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Bespoke Timber Log Store" },
+  { src: "/images/products/logstores/25eeef91-2af0-4e65-8df3-dd81afd203d6.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Log Store with Kindling Shelf" },
+  { src: "/images/products/logstores/49df5790-dbd0-4872-a66c-f3b9d6007d93.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Double-Bay Log Store" },
+  { src: "/images/products/logstores/4e670451-582e-496a-9268-f511f0154f88.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Slatted Log Store" },
+  { src: "/images/products/logstores/e4962d6f-759f-4306-abd9-3f9a1f63ac7e.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Bespoke Timber Log Store" },
+  { src: "/images/products/logstores/ea97d158-910b-4101-bb3c-1901d3164e8d.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Log Store with Kindling Shelf" },
+  { src: "/images/products/logstores/eac56b4e-532a-4a1a-b89d-c72f9210290a.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Double-Bay Log Store" },
+  { src: "/images/products/logstores/ec24ba08-452d-4d3c-bfec-41ce6f8154fb.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Slatted Log Store" },
+  { src: "/images/products/logstores/ff03adc9-67ec-492a-85ad-935f0271a4f0.jpg", alt: "Handcrafted timber log store in Carlisle, Cumbria", caption: "Bespoke Timber Log Store" },
+];
+---
+
+<ProductLayout {title} heading="Bespoke Logstores" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A good log store does a simple job well: it keeps your firewood dry, off the ground and seasoning nicely through the year. Ours are built from solid timber to stand up to a Cumbrian winter, with slatted sides so the air can get round the logs and keep them ready for the fire.</p>
+
+    <p>We'll make yours to fit the space you've got, whether that's a slim store tucked down the side of the house or a big double bay for a winter's worth of wood. Add a kindling shelf, a back board, or a slate roof to match your other outbuildings.</p>
+
+    <p>If you burn wood, a proper store pays for itself in dry, ready-to-go logs. Give us a call on <strong>01228 512303</strong> and we'll sort you out with one built to last.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Single, double, and multi-bay log stores</li>
+      <li>Slatted sides for proper airflow and seasoning</li>
+      <li>Optional kindling shelves and back boards</li>
+      <li>Solid timber built to weather the Cumbrian seasons</li>
+      <li>Made to fit the space and the amount of wood you burn</li>
+    </ul>
+  </div>
+</ProductLayout>

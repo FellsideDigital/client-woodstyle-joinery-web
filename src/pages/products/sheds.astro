@@ -1,0 +1,55 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bespoke Sheds Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handmade timber garden sheds and workshops in Carlisle, Cumbria. Built stronger than off-the-shelf kits, tailored to your garden, tools, and storage needs.";
+
+const faqs = [
+  {
+    question: "How is a bespoke shed better than a flat-pack one?",
+    answer: "Off-the-shelf sheds use thin cladding and light framing to keep the price down, so they warp, leak, and struggle in high winds. Ours are built from proper timber with a solid frame and a well-made roof, so they last decades rather than a few seasons."
+  },
+  {
+    question: "Can you build a shed to an awkward size or shape?",
+    answer: "Yes, that's the whole point of bespoke. We build to fit your plot, whether that means a long narrow store down a boundary, an L-shape round a corner, or a taller building to clear head height for a workshop."
+  },
+  {
+    question: "Can you add power and windows for a workshop?",
+    answer: "We build the shed ready for it, with framing for windows, benches, and cable runs. We'd recommend a qualified electrician makes the final connections, and we can plan the layout around that."
+  },
+  {
+    question: "How do I get a quote for a shed in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form. Tell us what you need to store and roughly the size you are after, and we will prepare a free, no-obligation quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/sheds/196f54ba-e35d-4a82-a387-4ed23a63fed2.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Bespoke Timber Shed" },
+  { src: "/images/products/sheds/3d294b76-684b-47bd-9204-819b5cdc0d48.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Garden Storage Shed" },
+  { src: "/images/products/sheds/67d3f033-b43b-46a7-891f-884a67ea1722.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Apex-Roof Shed" },
+  { src: "/images/products/sheds/a479f6c4-4471-41d1-a0ea-1e41823181c1.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Workshop Shed" },
+  { src: "/images/products/sheds/ae2c638b-2861-4cf2-bfb5-8e8eba324165.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Bespoke Timber Shed" },
+  { src: "/images/products/sheds/ceecfd84-93a2-4490-8a8b-02f9520c1738.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Garden Storage Shed" },
+  { src: "/images/products/sheds/da39cf02-bec9-4aa0-afb4-631cf9ec5ead.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Apex-Roof Shed" },
+  { src: "/images/products/sheds/ee836941-4a3a-41fd-9de5-f2c343b3bfed.jpg", alt: "Handcrafted timber garden shed in Carlisle, Cumbria", caption: "Workshop Shed" },
+];
+---
+
+<ProductLayout {title} heading="Bespoke Sheds" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>Most flat-pack sheds are thin, flimsy, and blown about by the first proper gale. Ours are a different thing altogether: built from solid timber with a proper frame, a decent roof, and joinery that holds up to whatever the weather throws at it.</p>
+
+    <p>We make them to fit your garden and what you actually need to store, from the mower and the garden tools to bikes, a workbench, or a full workshop with windows and power runs. You choose the size, the door, the roof, and the finish.</p>
+
+    <p>If you want a shed that'll still be standing strong in twenty years, not twenty months, we're the folk to build it. Give us a call on <strong>01228 512303</strong> to get started.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Garden stores, larger sheds, and full workshops</li>
+      <li>Solid timber framing built to outlast flat-pack kits</li>
+      <li>Apex, pent, and pitched roofs to suit your garden</li>
+      <li>Windows, workbenches, and power runs where you need them</li>
+      <li>Made to measure for your plot and your kit</li>
+    </ul>
+  </div>
+</ProductLayout>
