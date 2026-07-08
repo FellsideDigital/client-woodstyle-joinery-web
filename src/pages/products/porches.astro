@@ -1,0 +1,56 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bespoke Porches Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handcrafted timber and oak-framed porches in Carlisle, Cumbria. Add kerb appeal, shelter, and storage to your entrance with a porch built to suit your home.";
+
+const faqs = [
+  {
+    question: "Do I need planning permission for a porch?",
+    answer: "Many porches fall under permitted development if they are within certain size and height limits, but it depends on your property. We can talk you through the rules and, where needed, point you in the right direction before any work starts."
+  },
+  {
+    question: "What styles of porch do you build?",
+    answer: "Everything from a simple pitched canopy over the door to fully enclosed storm porches and traditional oak-framed entrances. We match the design to your home so it looks part of the original build."
+  },
+  {
+    question: "Can a porch really make my house warmer?",
+    answer: "Yes. An enclosed porch creates a buffer between the outside and your hallway, cutting down draughts every time the front door opens and giving you a place to keep coats and boots."
+  },
+  {
+    question: "How do I get a quote for a porch in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form to arrange a free, no-obligation consultation. We will visit, take a look at your entrance, and prepare a design and quote to suit."
+  }
+];
+
+const images = [
+  { src: "/images/products/porches/1bd87d91-fd38-47a6-8393-f6d27a4dce57.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Bespoke Timber Porch" },
+  { src: "/images/products/porches/3900b056-8fb9-4e30-af17-458bb9db1866.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Oak-Framed Porch" },
+  { src: "/images/products/porches/6b782d47-7aae-4c84-96cd-55a87ae6a325.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Enclosed Storm Porch" },
+  { src: "/images/products/porches/8aaed681-fb8c-4f05-9812-149858f5f492.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Pitched-Roof Porch" },
+  { src: "/images/products/porches/9194620d-378b-47da-be5f-813dff16e33a.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Bespoke Timber Porch" },
+  { src: "/images/products/porches/99dbfb26-1e4c-4743-95f0-036e69802bd3.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Oak-Framed Porch" },
+  { src: "/images/products/porches/acaf49ac-a559-4b75-8bf7-e063e9c90b9f.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Enclosed Storm Porch" },
+  { src: "/images/products/porches/d5582a4d-671a-459d-86d6-58eece69fa47.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Pitched-Roof Porch" },
+  { src: "/images/products/porches/f7d63066-1a76-4c96-b62d-2d3274cff3bb.jpg", alt: "Handcrafted timber porch in Carlisle, Cumbria", caption: "Bespoke Timber Porch" },
+];
+---
+
+<ProductLayout {title} heading="Bespoke Porches" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A porch is the first thing folk see when they come to your door, so it's worth getting right. Beyond the good looks, it gives you shelter from the weather, somewhere to shake off wet coats and muddy boots, and a bit of extra warmth by the front door.</p>
+
+    <p>We build porches to suit the house, from a simple pitched canopy over the step to a fully enclosed storm porch or a handsome oak frame. Every one is made to sit properly against your brick or render so it looks like it was always meant to be there.</p>
+
+    <p>Whether you're after more kerb appeal, a warmer hallway, or just somewhere dry to stand while you find your keys, we'll build you a porch to be proud of. Give us a call on <strong>01228 512303</strong> to talk it through.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Open canopy, enclosed, and oak-framed porches</li>
+      <li>Designs matched to your brick, render, and rooflines</li>
+      <li>Shelter, storage, and a warmer entrance</li>
+      <li>Solid timber and traditional joinery throughout</li>
+      <li>Built to add kerb appeal and value to your home</li>
+    </ul>
+  </div>
+</ProductLayout>

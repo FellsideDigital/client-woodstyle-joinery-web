@@ -1,0 +1,55 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bespoke Summerhouses Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handcrafted timber summerhouses and garden rooms in Carlisle, Cumbria. A comfortable retreat at the bottom of the garden, built and insulated to be used all year.";
+
+const faqs = [
+  {
+    question: "Can I use a summerhouse in winter?",
+    answer: "You can if we build it for it. With insulation, lining, and good glazing, a summerhouse becomes a proper year-round garden room you can heat and use whatever the weather. Tell us how you plan to use it and we will spec it to match."
+  },
+  {
+    question: "Can a summerhouse be used as a home office?",
+    answer: "Absolutely, and lots of ours are. We insulate and line them, plan the layout for a desk and storage, and leave provision for power and network runs so you have a warm, quiet place to work away from the house."
+  },
+  {
+    question: "Where is the best place to put a summerhouse?",
+    answer: "Usually where it catches the most sun and looks back over the garden. We will help you pick a spot and orientation that makes the most of the light and the view when we come to take a look."
+  },
+  {
+    question: "How do I get a quote for a summerhouse in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form to arrange a free, no-obligation consultation. We will discuss size, use, and finish before preparing a design and quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/summerhouses/269f67fb-13e4-4892-a39e-08928eee35f8.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Bespoke Summerhouse" },
+  { src: "/images/products/summerhouses/5f9da212-fdc8-4604-bfd4-e37ef7adb4af.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Corner Summerhouse" },
+  { src: "/images/products/summerhouses/767b15a1-ba1b-45b5-a9b4-6eb6292e065f.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Garden Room Summerhouse" },
+  { src: "/images/products/summerhouses/85f67dc8-5c0c-47bb-ae12-2fd8440568bc.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Veranda Summerhouse" },
+  { src: "/images/products/summerhouses/927ae82b-a9f5-4a2a-878f-3ca18ce4983a.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Bespoke Summerhouse" },
+  { src: "/images/products/summerhouses/94cb61ff-144a-4c5d-83fa-cf0bd9fda519.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Corner Summerhouse" },
+  { src: "/images/products/summerhouses/a36c425f-0819-4e19-85e1-bdee7098ca6b.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Garden Room Summerhouse" },
+  { src: "/images/products/summerhouses/bd7a661f-f23c-425d-adcd-16492b16ac4e.jpg", alt: "Handcrafted timber summerhouse in Carlisle, Cumbria", caption: "Veranda Summerhouse" },
+];
+---
+
+<ProductLayout {title} heading="Bespoke Summerhouses" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A summerhouse gives you a proper spot to sit out of the wind and enjoy the garden, whether that's a morning coffee, a quiet read, or somewhere for the grandkids to play. Ours are built to be comfortable and good-looking, not just a box on a base.</p>
+
+    <p>We can make yours as a simple sunny retreat or insulate and line it as a year-round garden room, home office, or studio. Choose your glazing, doors, veranda, and finish, and we'll build it to suit the way you want to use it.</p>
+
+    <p>Set in the right corner of the garden with a decent bit of glazing, a summerhouse quickly becomes everyone's favourite room. Give us a call on <strong>01228 512303</strong> to talk through your ideas.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Summerhouses, garden rooms, offices, and studios</li>
+      <li>Optional insulation and lining for year-round use</li>
+      <li>Corner, apex, and veranda designs to suit your garden</li>
+      <li>Generous glazing, double doors, and quality finishes</li>
+      <li>Built and sited to make the most of the sun</li>
+    </ul>
+  </div>
+</ProductLayout>

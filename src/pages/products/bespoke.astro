@@ -1,0 +1,58 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Bespoke Joinery Projects Carlisle, Cumbria | Woodstyle Joinery";
+const description = "One-off bespoke joinery in Carlisle, Cumbria. Staircases, furniture, panelling, and custom commissions handcrafted to your design when nothing off-the-shelf will do.";
+
+const faqs = [
+  {
+    question: "What kind of bespoke projects do you take on?",
+    answer: "All sorts, from staircases and fitted furniture to panelling, window seats, bars, and unusual one-off commissions. If it can be made from timber and joinery, it's worth asking us about."
+  },
+  {
+    question: "I have an idea but no drawings. Can you still help?",
+    answer: "Yes. Plenty of our bespoke work starts as a rough idea or a photo. We'll talk it through, take measurements, and work up a design with you before we build anything, so you know exactly what you're getting."
+  },
+  {
+    question: "Can you match existing joinery or period features?",
+    answer: "We can. We regularly match new work to existing staircases, mouldings, and panelling so a bespoke addition blends in with the original rather than standing out."
+  },
+  {
+    question: "How do I get a quote for a bespoke project in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form and tell us what you have in mind. We will arrange to discuss it, then prepare a design and a free, no-obligation quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/bespoke/0f5f9d77-4f2b-4c9c-a8ec-8af8dafc5fbc.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Bespoke Joinery Project" },
+  { src: "/images/products/bespoke/15eefa8a-0a08-450f-92b8-aea79e9320e9.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Custom Timber Commission" },
+  { src: "/images/products/bespoke/17a0a7b3-0101-4935-8faa-a87dfc011df9.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Handcrafted Joinery" },
+  { src: "/images/products/bespoke/2e81de62-5087-47cc-82d5-bf089b54a3df.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "One-Off Bespoke Build" },
+  { src: "/images/products/bespoke/325aae2a-00e3-4ecd-b392-849e2e814ea5.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Bespoke Joinery Project" },
+  { src: "/images/products/bespoke/3fa6636f-71f9-4127-9c99-f7367288b028.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Custom Timber Commission" },
+  { src: "/images/products/bespoke/42644fee-1301-4c8e-9c57-acf194f0c259.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Handcrafted Joinery" },
+  { src: "/images/products/bespoke/7a341b34-bd44-42e9-91db-e27c07f1335e.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "One-Off Bespoke Build" },
+  { src: "/images/products/bespoke/8ac56199-73b7-4f4a-9754-c183b847dd2f.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Bespoke Joinery Project" },
+  { src: "/images/products/bespoke/f8abad3e-1e56-4e39-ab26-efeeadf8f5d7.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Custom Timber Commission" },
+  { src: "/images/products/bespoke/fdd17b5f-5b87-418a-8520-2c85c338f216.jpg", alt: "Bespoke handcrafted joinery project in Carlisle, Cumbria", caption: "Handcrafted Joinery" },
+];
+---
+
+<ProductLayout {title} heading="Bespoke Projects" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>Some jobs don't fit neatly into a category, and those are often the ones we enjoy most. If you've got an idea for a piece of joinery and can't find anything off-the-shelf that does it, this is where we come in.</p>
+
+    <p>Over the years we've built staircases, fitted furniture, panelling, window seats, bars, media units, and all manner of one-off commissions. Whatever it is, we'll sit down with you, work up a design, and make it properly from solid timber.</p>
+
+    <p>If you can picture it, there's a good chance we can build it. Give us a call on <strong>01228 512303</strong> and tell us what you've got in mind.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Bespoke staircases, balustrades, and handrails</li>
+      <li>Fitted and freestanding furniture built to your design</li>
+      <li>Panelling, window seats, and feature joinery</li>
+      <li>One-off commissions when nothing standard will do</li>
+      <li>Designed with you and handcrafted from solid timber</li>
+    </ul>
+  </div>
+</ProductLayout>
