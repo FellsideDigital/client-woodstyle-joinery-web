@@ -32,15 +32,35 @@ const images = [
   { src: "/images/products/verandas/IMG_3350.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Decked Veranda" },
   { src: "/images/products/verandas/IMG_3353.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Oak-Framed Veranda" },
   { src: "/images/products/verandas/IMG_4946.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Covered Veranda" },
-  { src: "/images/products/verandas/IMG_4963.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Decked Veranda" },
   { src: "/images/products/verandas/IMG_6659.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Oak-Framed Veranda" },
   { src: "/images/products/verandas/IMG_6664.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Covered Veranda" },
   { src: "/images/products/verandas/IMG_7860.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Decked Veranda" },
-  { src: "/images/products/verandas/cfe2c13a-04b9-4c85-ab08-cc82ebd3d888.jpeg", alt: "Oak-framed veranda by Woodstyle Joinery", caption: "Oak-Framed Veranda" },
 ];
 ---
 
 <ProductLayout {title} heading="Oak-Framed Verandas" {description} {images} {faqs}>
+  <section slot="after-gallery" class="section bg-white">
+    <div class="container">
+      <div class="spotlight-grid">
+        <div class="spotlight-image" data-reveal>
+          <img
+            src="/images/products/verandas/IMG_1878.jpeg"
+            alt="Oak framed veranda at Lingholm Cafe, Portinscale, Keswick"
+            class="h-auto w-full rounded-2xl shadow-xl"
+            loading="lazy"
+          />
+        </div>
+        <div class="spotlight-text" data-reveal data-reveal-delay="1">
+          <span class="section-kicker">Featured Project</span>
+          <h2 class="mb-6 font-bold text-primary-custom heading-accent">Lingholm Cafe, Keswick</h2>
+          <p class="text-xl">
+            One of the best examples of our Oak Framed Verandas is situated at Lingholm Cafe, Portinscale, Keswick, CA12 5T2. This under cover eating area was created in November 2024 to provide extra capacity to the popular cafe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="text-xl">
     <p>A veranda lets you enjoy the garden even when the Cumbrian weather isn't playing ball. It gives you a covered, sheltered spot along the back of the house to sit out, eat, or just watch the rain from the dry.</p>
 
@@ -58,3 +78,21 @@ const images = [
     </ul>
   </div>
 </ProductLayout>
+
+<style>
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .spotlight-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .spotlight-image img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+</style>

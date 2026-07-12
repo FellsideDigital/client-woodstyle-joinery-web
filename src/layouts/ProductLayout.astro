@@ -20,7 +20,11 @@ const { title, heading = title, description, images, faqs } = Astro.props;
     <div class="product-copy mx-auto" data-reveal>
       <slot />
     </div>
+  </section>
 
+  <slot name="featured" />
+
+  <section class="container">
     <div class="text-center mt-12" data-reveal>
       <span class="section-kicker">Gallery of Our Work</span>
       <h2 class="font-bold text-primary-custom heading-accent">{heading} Gallery</h2>
@@ -30,6 +34,8 @@ const { title, heading = title, description, images, faqs } = Astro.props;
     </div>
   </section>
 
+
+  <slot name="after-gallery" />
 
   <!-- CTA band -->
   <section class="bg-cream-deep text-center section mt-12">

@@ -91,7 +91,7 @@ const faqs = [
           <!-- Feature: Kitchens -->
           <a href="products/kitchens" class="feat-feature no-underline" data-reveal>
             <div class="product-card product-card--feature">
-              <img src="/images/products/kitchens/08C51F69-94F8-44E1-ACB3-D161600876D2_4_5005_c.jpeg" alt="Kitchen by Woodstyle Joinery" loading="lazy" />
+              <img src="/images/products/kitchens/DSC_1943-HDR.JPG" alt="Kitchen by Woodstyle Joinery" loading="lazy" />
               <div class="overlay"></div>
               <div class="card-text">
                 <h5 class="font-bold">Kitchens</h5>
@@ -103,7 +103,7 @@ const faqs = [
           <!-- Bedrooms -->
           <a href="products/bedrooms" class="feat-side-top no-underline" data-reveal data-reveal-delay="1">
             <div class="product-card">
-              <img src="/images/products/bedrooms/123F991B-630C-417A-AFF3-F543083D06E3_4_5005_c.jpeg" alt="Fitted bedroom and dressing room joinery" loading="lazy" />
+              <img src="/images/products/bedrooms/IMG_4151.jpeg" alt="Fitted bedroom and dressing room joinery" loading="lazy" />
               <div class="overlay"></div>
               <div class="card-text">
                 <h5 class="font-bold">Bedrooms & Dressing Rooms</h5>
@@ -115,7 +115,7 @@ const faqs = [
           <!-- Garages -->
           <a href="products/garages-and-carports" class="feat-side-bot no-underline" data-reveal data-reveal-delay="2">
             <div class="product-card">
-              <img src="/images/products/garages-and-carports/07EFA578-A2C9-4B95-ACD4-4040F2D95186_4_5005_c.jpeg" alt="Timber garage and carport" loading="lazy" />
+              <img src="/images/products/garages-and-carports/IMG_1913.jpeg" alt="Timber garage and carport" loading="lazy" />
               <div class="overlay"></div>
               <div class="card-text">
                 <h5 class="font-bold">Garages & Carports</h5>
@@ -127,7 +127,7 @@ const faqs = [
           <!-- Conservatories (wide) -->
           <a href="products/conservatories-and-orangeries" class="feat-wide no-underline" data-reveal data-reveal-delay="3">
             <div class="product-card">
-              <img src="/images/products/conservatories-and-orangeries/267E05C1-EC06-40FD-9012-F7C52D31947E_4_5005_c.jpeg" alt="Conservatory and orangery joinery" loading="lazy" />
+              <img src="/images/products/conservatories-and-orangeries/IMG_1856.jpeg" alt="Conservatory and orangery joinery" loading="lazy" />
               <div class="overlay"></div>
               <div class="card-text">
                 <h5 class="font-bold">Conservatories & Orangeries</h5>
@@ -139,6 +139,32 @@ const faqs = [
 
         <div class="mt-12 text-center" data-reveal>
           <a href="products" class="btn btn-secondary-custom btn-lg px-12 font-bold">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project Spotlight -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="spotlight-grid">
+          <div class="spotlight-image" data-reveal>
+            <img
+              src="/images/products/verandas/IMG_1878.jpeg"
+              alt="Oak framed veranda at Lingholm Cafe, Portinscale, Keswick"
+              class="h-auto w-full rounded-2xl shadow-xl"
+              loading="lazy"
+            />
+          </div>
+          <div class="spotlight-text" data-reveal data-reveal-delay="1">
+            <span class="section-kicker">Featured Project</span>
+            <h2 class="mb-6 font-bold text-primary-custom heading-accent">Lingholm Cafe, Keswick</h2>
+            <p class="text-xl">
+              One of the best examples of our Oak Framed Verandas is situated at Lingholm Cafe, Portinscale, Keswick, CA12 5T2. This under cover eating area was created in November 2024 to provide extra capacity to the popular cafe.
+            </p>
+            <a href="/products/oak-framed-verandas" class="btn btn-secondary-custom btn-lg font-bold mt-8" style="width: fit-content">
+              See Our Oak Framed Verandas →
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -174,8 +200,7 @@ const faqs = [
       @media (min-width: 992px) {
         .featured-grid {
           grid-template-columns: 1.45fr 1fr;
-          grid-template-rows: 230px 230px;
-          grid-auto-rows: 280px;
+          grid-template-rows: 230px 230px 420px;
           grid-template-areas:
             "feature side-top"
             "feature side-bottom"
@@ -206,6 +231,22 @@ const faqs = [
         font-style: normal;
         font-size: 0.95rem;
         color: var(--ink-muted);
+      }
+
+      .spotlight-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        .spotlight-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .spotlight-image img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
       }
     </style>
 </BaseLayout>
