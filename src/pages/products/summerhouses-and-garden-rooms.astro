@@ -1,0 +1,54 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Summerhouses & Garden Rooms Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handcrafted timber summerhouses and garden rooms in Carlisle, Cumbria. A comfortable retreat at the bottom of the garden, built and insulated to be used all year.";
+
+const faqs = [
+  {
+    question: "Can I use a summerhouse in winter?",
+    answer: "You can if we build it for it. With insulation, lining, and good glazing, a summerhouse becomes a proper year-round garden room you can heat and use whatever the weather. Tell us how you plan to use it and we will spec it to match."
+  },
+  {
+    question: "Can a garden room be used as a home office?",
+    answer: "Absolutely, and lots of ours are. We insulate and line them, plan the layout for a desk and storage, and leave provision for power and network runs so you have a warm, quiet place to work away from the house."
+  },
+  {
+    question: "Where is the best place to put a summerhouse?",
+    answer: "Usually where it catches the most sun and looks back over the garden. We will help you pick a spot and orientation that makes the most of the light and the view when we come to take a look."
+  },
+  {
+    question: "How do I get a quote for a summerhouse in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form to arrange a free, no-obligation consultation. We will discuss size, use, and finish before preparing a design and quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_1456_2.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Timber Summerhouse" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_2665.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Garden Room" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_5974.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Summerhouse with Veranda" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_5975.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Timber Summerhouse" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_8663.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Garden Room" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_8664.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Summerhouse with Veranda" },
+  { src: "/images/products/summerhouses-and-garden-rooms/IMG_8668.jpeg", alt: "Handcrafted summerhouse or garden room in Carlisle, Cumbria", caption: "Timber Summerhouse" },
+];
+---
+
+<ProductLayout {title} heading="Summerhouses & Garden Rooms" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A summerhouse gives you a proper spot to sit out of the wind and enjoy the garden, whether that's a morning coffee, a quiet read, or somewhere for the grandkids to play. Ours are built to be comfortable and good-looking, not just a box on a base.</p>
+
+    <p>We can make yours as a simple sunny retreat or insulate and line it as a year-round garden room, home office, or studio. Choose your glazing, doors, veranda, and finish, and we'll build it to suit the way you want to use it.</p>
+
+    <p>Set in the right corner of the garden with a decent bit of glazing, a summerhouse quickly becomes everyone's favourite room. Give us a call on <strong>01228 512303</strong> to talk through your ideas.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Summerhouses, garden rooms, offices, and studios</li>
+      <li>Optional insulation and lining for year-round use</li>
+      <li>Corner, apex, and veranda designs to suit your garden</li>
+      <li>Generous glazing, double doors, and quality finishes</li>
+      <li>Built and sited to make the most of the sun</li>
+    </ul>
+  </div>
+</ProductLayout>

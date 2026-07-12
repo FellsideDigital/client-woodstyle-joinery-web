@@ -1,0 +1,60 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+
+const title = "Pergolas & Arbours Carlisle, Cumbria | Woodstyle Joinery";
+const description = "Handcrafted timber pergolas and arbours in Carlisle, Cumbria. Beautiful garden structures that create shade, shelter, and a focal point in your outdoor space.";
+
+const faqs = [
+  {
+    question: "What is the difference between a pergola and an arbour?",
+    answer: "A pergola is typically a larger open-roofed structure supported by posts, creating a shaded walkway or seating area. An arbour is a smaller, more intimate structure, often arched, used as a garden seat or decorative focal point. We build both to suit your garden."
+  },
+  {
+    question: "Will a pergola add value to my home?",
+    answer: "A well-built timber pergola adds visual appeal and usable outdoor space to any garden, which buyers tend to value. More immediately, it gives you somewhere genuinely enjoyable to spend time outside."
+  },
+  {
+    question: "Can climbing plants grow up a pergola?",
+    answer: "Yes, and they look great. We design our pergolas and arbours with climbing plants in mind, using materials and spacings that suit wisteria, roses, clematis, and other climbers."
+  },
+  {
+    question: "How do I get a quote for a pergola or arbour in Carlisle or Cumbria?",
+    answer: "Call us on 01228 512303 or use our contact form. We will arrange a free, no-obligation consultation to discuss your garden and design ideas."
+  }
+];
+
+const images = [
+  { src: "/images/products/pergolas-and-arbours/810d4e81-a306-4daf-97bb-c5cc8571278b.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Timber Pergola" },
+  { src: "/images/products/pergolas-and-arbours/Arbour%20vii.jpeg", alt: "Garden arbour by Woodstyle Joinery", caption: "Garden Arbour" },
+  { src: "/images/products/pergolas-and-arbours/IMGP3026.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Oak Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_0081.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Timber Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_0083.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Garden Arbour" },
+  { src: "/images/products/pergolas-and-arbours/IMG_0417.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Oak Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_0490.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Timber Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_20210804_164632.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Garden Arbour" },
+  { src: "/images/products/pergolas-and-arbours/IMG_3376.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Oak Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_4435.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Timber Pergola" },
+  { src: "/images/products/pergolas-and-arbours/IMG_7558.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Garden Arbour" },
+  { src: "/images/products/pergolas-and-arbours/IMG_7559.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Oak Pergola" },
+  { src: "/images/products/pergolas-and-arbours/f81df0b3-662a-4234-a7c0-be02f4c5513f.jpeg", alt: "Timber pergola or arbour by Woodstyle Joinery", caption: "Timber Pergola" },
+];
+---
+
+<ProductLayout {title} heading="Pergolas & Arbours" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A pergola or arbour adds structure and character to a garden. Whether you want a shaded walkway, a place to sit with climbing plants overhead, or a decorative feature to draw the eye, we'll build one that looks right and lasts.</p>
+
+    <p>We build our pergolas and arbours from solid timber and design them to complement your garden. Climbers, lighting, and decorative detailing can all be incorporated to make the space your own.</p>
+
+    <p>Give us a call on <strong>01228 512303</strong> to discuss what would work best for your garden.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Timber and oak pergolas in a range of sizes</li>
+      <li>Garden arbours and seating structures</li>
+      <li>Designs suited to climbing plants and garden lighting</li>
+      <li>Built from solid timber to outlast cheaper alternatives</li>
+      <li>Tailored to your garden layout and style</li>
+    </ul>
+  </div>
+</ProductLayout>

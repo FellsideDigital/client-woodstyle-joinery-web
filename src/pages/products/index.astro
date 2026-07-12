@@ -6,63 +6,75 @@ const description = "Browse our full range of bespoke joinery: kitchens, bedroom
 
 const products = [
   {
-    title: "Bespoke Kitchens",
+    title: "Kitchens",
     href: "/products/kitchens",
-    image: "/images/products/kitchens/kitchen_6.jpg",
-    alt: "Bespoke Kitchens"
+    image: "/images/products/kitchens/DSC_1943-HDR.JPG",
+    alt: "Kitchens"
   },
   {
     title: "Bedrooms & Dressing Rooms",
     href: "/products/bedrooms",
-    image: "/images/products/bedrooms/bedroom_1.jpg",
+    image: "/images/products/bedrooms/IMG_2242.jpeg",
     alt: "Bedrooms and Dressing Rooms"
   },
   {
-    title: "Garages & Workshops",
-    href: "/products/garages",
-    image: "/images/products/garages/garage_14.jpg",
-    alt: "Garages and Workshops"
+    title: "Garages & Carports",
+    href: "/products/garages-and-carports",
+    image: "/images/products/garages-and-carports/IMG_1913.jpeg",
+    alt: "Garages and Carports"
   },
   {
     title: "Conservatories & Orangeries",
-    href: "/products/conservatories",
-    image: "/images/products/conservatories/conservatory_1.jpg",
+    href: "/products/conservatories-and-orangeries",
+    image: "/images/products/conservatories-and-orangeries/IMG_0120.jpeg",
     alt: "Conservatories and Orangeries"
   },
   {
     title: "Summerhouses & Garden Rooms",
-    href: "/products/summerhouses",
-    image: "/images/products/summerhouses/269f67fb-13e4-4892-a39e-08928eee35f8.jpg",
+    href: "/products/summerhouses-and-garden-rooms",
+    image: "/images/products/summerhouses-and-garden-rooms/IMG_1456_2.jpeg",
     alt: "Summerhouses and Garden Rooms"
   },
   {
-    title: "Verandas",
-    href: "/products/verandas",
-    image: "/images/products/verandas/4295f66f-eef6-4652-a46d-9516afd6baba.jpg",
-    alt: "Verandas"
+    title: "Oak-Framed Verandas",
+    href: "/products/oak-framed-verandas",
+    image: "/images/products/verandas/IMG_0548.jpeg",
+    alt: "Oak-Framed Verandas"
   },
   {
     title: "Porches",
     href: "/products/porches",
-    image: "/images/products/porches/1bd87d91-fd38-47a6-8393-f6d27a4dce57.jpg",
+    image: "/images/products/porches/IMG_4418.jpeg",
     alt: "Porches"
   },
   {
-    title: "Sheds & Workshops",
+    title: "Pergolas & Arbours",
+    href: "/products/pergolas-and-arbours",
+    image: "/images/products/pergolas-and-arbours/IMG_0081.jpeg",
+    alt: "Pergolas and Arbours"
+  },
+  {
+    title: "Outdoor Eating",
+    href: "/products/outdoor-eating",
+    image: "/images/products/outdoor-eating/IMG_0065.jpeg",
+    alt: "Outdoor Eating Areas"
+  },
+  {
+    title: "Sheds",
     href: "/products/sheds",
     image: "/images/products/sheds/196f54ba-e35d-4a82-a387-4ed23a63fed2.jpg",
-    alt: "Sheds and Workshops"
+    alt: "Sheds"
   },
   {
     title: "Log Stores",
     href: "/products/logstores",
-    image: "/images/products/logstores/1c3c77d8-c530-4377-b793-057d4bafac52.jpg",
+    image: "/images/products/logstores/IMG_0422.jpeg",
     alt: "Log Stores"
   },
   {
-    title: "Bespoke Projects",
+    title: "Bespoke Joinery",
     href: "/products/bespoke",
-    image: "/images/products/bespoke/0f5f9d77-4f2b-4c9c-a8ec-8af8dafc5fbc.jpg",
+    image: "/images/products/bespoke/IMG_7863.jpeg",
     alt: "Bespoke Joinery Projects"
   },
 ];
@@ -77,6 +89,15 @@ const products = [
       <h1 class="display-5 font-bold">Bespoke Joinery, Built Around You</h1>
       <p class="lead mx-auto" style="max-width: 640px">Have a look through our handmade joinery. Every piece is designed and built to fit your home, here in Carlisle and right across Cumbria.</p>
     </div>
+  </section>
+
+  <!-- Sale banner -->
+  <section class="container mb-4 mt-[-2rem]" data-reveal>
+    <a href="/products/sale" class="sale-banner">
+      <span class="sale-banner-tag">On Sale Now</span>
+      <span class="sale-banner-text">Click to view our sale items.</span>
+      <span class="sale-banner-arrow">→</span>
+    </a>
   </section>
 
   <!-- Products Grid -->
@@ -106,3 +127,54 @@ const products = [
   </section>
 
 </BaseLayout>
+
+<style>
+.sale-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.75rem;
+  box-shadow: var(--shadow-accent);
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease);
+}
+.sale-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(168, 124, 79, 0.4);
+  color: #fff;
+}
+
+.sale-banner-tag {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.75rem;
+}
+
+.sale-banner-text {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sale-banner-arrow {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  opacity: 0.85;
+  transition: transform .25s var(--ease-out);
+}
+.sale-banner:hover .sale-banner-arrow {
+  transform: translateX(5px);
+  opacity: 1;
+}
+</style>

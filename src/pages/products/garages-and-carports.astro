@@ -1,0 +1,68 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const title = "Oak Garages & Carports Carlisle | Woodstyle Joinery";
+const description = "Custom oak-framed garages and carports in Cumbria. Single, double, and bespoke designs with integrated storage and workshop space.";
+
+const faqs = [
+  {
+    question: "What types of garages does Woodstyle Joinery build?",
+    answer: "We build single and double garages, oak-framed garages, garages with carports, and integrated garage-workshop combinations. Additional features such as log stores, garden sheds, and hobby workshops can also be incorporated into your design."
+  },
+  {
+    question: "Are oak-framed garages durable?",
+    answer: "Yes. Oak is naturally resistant to rot and can last for centuries when properly maintained. Oak-framed garages are an extremely durable, long-lasting investment that also adds significant aesthetic value and kerb appeal to your property."
+  },
+  {
+    question: "Can I have a combined garage and carport in Cumbria?",
+    answer: "Absolutely. We design layouts to suit what you need, whether that's enclosed parking, an open carport, a workshop, or a combination of all three. Every structure is bespoke and built to your requirements."
+  },
+  {
+    question: "How do I get a quote for a garage in Carlisle?",
+    answer: "Call us on 01228 512303 or complete our contact form. We will arrange a consultation to discuss your space, requirements, and preferred design before providing a detailed quote."
+  }
+];
+
+const images = [
+  { src: "/images/products/garages-and-carports/1c8ae6f8-1543-4ba3-ab13-a68f951770fe.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Oak-Framed Garage" },
+  { src: "/images/products/garages-and-carports/3e903b82-152e-43f9-a451-575a006af53b.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Double Garage" },
+  { src: "/images/products/garages-and-carports/IMG_0355.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Timber Carport" },
+  { src: "/images/products/garages-and-carports/IMG_1296.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Garage with Carport" },
+  { src: "/images/products/garages-and-carports/IMG_1913.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Oak-Framed Garage" },
+  { src: "/images/products/garages-and-carports/IMG_1971.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Double Garage" },
+  { src: "/images/products/garages-and-carports/IMG_1974.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Timber Carport" },
+  { src: "/images/products/garages-and-carports/IMG_20210716_165131.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Garage with Carport" },
+  { src: "/images/products/garages-and-carports/IMG_20210716_165256.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Oak-Framed Garage" },
+  { src: "/images/products/garages-and-carports/IMG_2038.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Double Garage" },
+  { src: "/images/products/garages-and-carports/IMG_2681.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Timber Carport" },
+  { src: "/images/products/garages-and-carports/IMG_2682.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Garage with Carport" },
+  { src: "/images/products/garages-and-carports/IMG_3226.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Oak-Framed Garage" },
+  { src: "/images/products/garages-and-carports/IMG_3418.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Double Garage" },
+  { src: "/images/products/garages-and-carports/IMG_3595.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Timber Carport" },
+  { src: "/images/products/garages-and-carports/IMG_3720.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Garage with Carport" },
+  { src: "/images/products/garages-and-carports/IMG_7858.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Oak-Framed Garage" },
+  { src: "/images/products/garages-and-carports/IMG_7859.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Double Garage" },
+  { src: "/images/products/garages-and-carports/IMG_9794.jpeg", alt: "Oak-framed garage or carport by Woodstyle Joinery", caption: "Timber Carport" },
+  { src: "/images/products/garages-and-carports/Oak%2C%20double%20garage%20%282%29.jpeg", alt: "Oak double garage by Woodstyle Joinery", caption: "Oak Double Garage" },
+];
+---
+
+<ProductLayout {title} heading="Garages & Carports" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>You love your car, so why not treat it to one of our garages or carports? A sheltered, comfortable space gives you somewhere to tinker, clean and work on it to your heart's content. Whether it's a double garage for the work and weekend cars or an open carport to keep the rain off, we build them to last and to suit what you need.</p>
+
+    <p>Oak frame garages provide a solid and safe place to store your car or other possessions. Additional features such as carports, garden shed workshops, and log stores can also be incorporated into our designs.</p>
+
+    <p>To discuss our full range of garages and carports, contact us on <strong>01228 512303</strong>.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Double garages and single garages</li>
+      <li>Oak-framed garages with style and durability</li>
+      <li>Open and enclosed carports</li>
+      <li>Garages with log storage or additional storage features</li>
+      <li>Custom designs tailored to your property</li>
+    </ul>
+  </div>
+</ProductLayout>

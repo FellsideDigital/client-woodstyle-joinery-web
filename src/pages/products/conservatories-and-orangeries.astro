@@ -1,0 +1,63 @@
+---
+import ProductLayout from '../../layouts/ProductLayout.astro';
+import FAQ from '../../components/FAQ.astro';
+
+const title = "Conservatories & Orangeries Carlisle | Woodstyle Joinery";
+const description = "Classical Victorian conservatories and oak-framed orangeries in Cumbria. Handcrafted hardwood designs that stand the test of time.";
+
+const faqs = [
+  {
+    question: "What types of conservatories does Woodstyle Joinery build?",
+    answer: "We specialise in classical Victorian conservatories and oak-framed orangeries. Unlike mass-produced uPVC alternatives, every conservatory is handcrafted using hardwood materials and designed to complement your home's existing architecture."
+  },
+  {
+    question: "Why choose an oak-framed conservatory over uPVC?",
+    answer: "Oak-framed conservatories are more durable, aesthetically superior, and require less long-term maintenance than uPVC. Once varnished, oak is naturally protected and greatly enhances the value and appearance of your home."
+  },
+  {
+    question: "Do you build orangeries as well as conservatories in Cumbria?",
+    answer: "Yes. We build both traditional conservatories and orangeries across Cumbria and the North of England. Both are fully bespoke, designed to complement your property and serve as a comfortable, usable space year-round."
+  },
+  {
+    question: "How long does a conservatory take to design and build?",
+    answer: "Timelines vary depending on the complexity of the design. We begin with CAD drawings for your approval, then manufacture and install. Contact us on 01228 512303 to discuss your specific project and timeline."
+  }
+];
+
+const images = [
+  { src: "/images/products/conservatories-and-orangeries/IMG_0120.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Victorian Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_1072.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Oak-Framed Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_1856.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Hardwood Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_1858.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Classical Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_2260.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Victorian Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_2336.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Oak-Framed Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_2342.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Hardwood Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_2344.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Classical Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_3451.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Victorian Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_3603.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Oak-Framed Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_4391.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Hardwood Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_6058.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Classical Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_6554.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Victorian Conservatory" },
+  { src: "/images/products/conservatories-and-orangeries/IMG_8121.jpeg", alt: "Conservatory or orangery by Woodstyle Joinery", caption: "Oak-Framed Orangery" },
+  { src: "/images/products/conservatories-and-orangeries/Oak%20Garden%20room%20with%20slate%20roof.jpeg", alt: "Oak garden room with slate roof by Woodstyle Joinery", caption: "Oak Garden Room" },
+];
+---
+
+<ProductLayout {title} heading="Conservatories & Orangeries" {description} {images} {faqs}>
+  <div class="text-xl">
+    <p>A lot of conservatories these days have that mass-produced look. We do things differently, building classical Victorian designs in hardwood that you won't see anywhere else. A bespoke oak-framed conservatory or orangery that suits your home and the way you live in it.</p>
+
+    <p>A timber frame might cost a bit more to begin with, but once it's varnished there's less upkeep and it does far more for the look of your home. Every job is built to your requirements, so you end up with something a cut above the average conservatory or orangery.</p>
+
+    <p>To discuss our full range of conservatories and orangeries, please contact us on <strong>01228 512303</strong> or visit our joinery showroom in Brisco, Carlisle, Cumbria.</p>
+
+    <h3 class="mt-12 mb-4">What We Offer</h3>
+    <ul class="feature-list mb-2">
+      <li>Classical Victorian conservatories and orangeries</li>
+      <li>Luxury oak-framed garden rooms</li>
+      <li>Designs that perfectly complement your home's architecture</li>
+      <li>Low-maintenance, high-quality hardwood constructions</li>
+      <li>Tailored solutions to suit your lifestyle and space</li>
+    </ul>
+  </div>
+</ProductLayout>
