@@ -19,8 +19,24 @@ const faqs = [
   },
   {
     question: "How do I get a quote for a log store in Carlisle or Cumbria?",
-    answer: "Call us on 01228 512303 or use our contact form. Let us know roughly how much wood you need to store and where it will go, and we will prepare a free, no-obligation quote."
+    answer: "Call us on 01228 512303 or use our contact form. Let us know roughly how much wood you need to store and where it will go, and we will prepare a quote."
   }
+];
+
+const logstoreSizes = [
+  { name: "Single", size: "1310 × 870 × 1860", price: "£296" },
+  { name: "1.8m Double", size: "1789 × 870 × 1860", price: "£440" },
+  { name: "2.4m Double", size: "2400 × 870 × 1860", price: "£499" },
+  { name: "Oak-framed front, cedar shingle roof", size: "2400 × 870", price: "£895" },
+];
+
+const bikeStores = [
+  { name: "Bike & log store, redwood cladding", price: "£1,980" },
+  { name: "Bike store, green oak frame", price: "£3,280" },
+  { name: "8ft × 6ft shed with optional log store", price: "£3,380" },
+  { name: "Secure bike store, steel-clad roof", price: "£4,800" },
+  { name: "Secure bike store, cedar shingle roof", price: "£4,980" },
+  { name: "Bespoke bike & log store", price: "£5,800" },
 ];
 
 const images = [
@@ -58,4 +74,266 @@ const images = [
       <li>Made to fit the space and the amount of wood you burn</li>
     </ul>
   </div>
+
+  <section slot="featured" class="container" data-reveal>
+    <div class="sizes-panel">
+      <div class="sizes-head text-center">
+        <span class="section-kicker">Sizes &amp; Prices</span>
+        <h2 class="font-bold text-primary-custom heading-accent">Logstore Sizes &amp; Prices</h2>
+      </div>
+
+      <div class="sizes-grid">
+        <div class="sizes-table-wrap">
+          <table class="sizes-table">
+            <thead>
+              <tr>
+                <th scope="col">Log Store</th>
+                <th scope="col">Size (W × D × H)</th>
+                <th scope="col" class="price-col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {logstoreSizes.map((row) => (
+                <tr>
+                  <th scope="row">{row.name}</th>
+                  <td>{row.size} <span class="unit">mm</span></td>
+                  <td class="price-col"><span class="price">{row.price}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="sizes-note">Other sizes made to order, plus wheelie bin stores, sheds and bike stores. Call <strong>01228 512303</strong> for a quote.</p>
+        </div>
+
+        <figure class="sizes-drawing">
+          <a class="img-link" href="/images/products/logstores/LOGSTORE%20DIMENSIONS%20ONE.pdf" target="_blank" rel="noopener">
+            <img src="/images/products/logstores/logstore-dimensions.png" alt="Woodstyle Joinery log store dimensions drawing showing single, 1.8m double, 2.4m double and oak-framed front sizes" loading="lazy" />
+          </a>
+          <figcaption>
+            <a href="/images/products/logstores/LOGSTORE%20DIMENSIONS%20ONE.pdf" target="_blank" rel="noopener" class="drawing-link">View full drawing (PDF)</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section slot="after-gallery" class="container" data-reveal>
+    <div class="sizes-panel bike-panel">
+      <div class="sizes-head text-center">
+        <span class="section-kicker">Also Made To Order</span>
+        <h2 class="font-bold text-primary-custom heading-accent">Bike &amp; Cycle Stores</h2>
+      </div>
+
+      <div class="product-copy mx-auto bike-intro">
+        <p>We build bike and cycle stores as well as log stores. They range from a simple slatted store that keeps the bikes dry to a fully lockable timber shed with a green oak frame, cedar shingle or steel roof and a 5-lever deadlock.</p>
+        <p>Plenty are built as combined bike and log stores. Everything is made to order, so tell us what you need to store and we'll price it up.</p>
+      </div>
+
+      <div class="sizes-grid">
+        <div class="sizes-table-wrap">
+          <table class="sizes-table">
+            <thead>
+              <tr>
+                <th scope="col">Design</th>
+                <th scope="col" class="price-col">Guide Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bikeStores.map((row) => (
+                <tr>
+                  <th scope="row">{row.name}</th>
+                  <td class="price-col"><span class="price">from {row.price}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div class="sizes-note bike-note">
+            <p class="note-fine">Guide prices, plus delivery and fitting. Add a log store to the 8×6 shed for £650. Other sizes and designs made to order.</p>
+          </div>
+        </div>
+
+        <figure class="sizes-drawing">
+          <a class="img-link" href="/images/products/logstores/BIKE%20STORES%20POSTER.pdf" target="_blank" rel="noopener">
+            <img src="/images/products/logstores/bike-stores-poster.png" alt="Woodstyle Joinery bike and cycle store designs, from redwood-clad stores to secure oak-framed and steel-roofed bike sheds" loading="lazy" />
+          </a>
+          <figcaption>
+            <a href="/images/products/logstores/BIKE%20STORES%20POSTER.pdf" target="_blank" rel="noopener" class="drawing-link">View bike store designs (PDF)</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 </ProductLayout>
+
+<style>
+.sizes-panel {
+  margin-top: 3.5rem;
+}
+.sizes-head {
+  margin-bottom: 2rem;
+}
+.sizes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+@media (max-width: 860px) {
+  .sizes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+.sizes-table-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.sizes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+.sizes-table th,
+.sizes-table td {
+  padding: 0.95rem 1.15rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.sizes-table thead th {
+  background: var(--cream-deep);
+  color: var(--primary-darker);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.sizes-table tbody tr {
+  transition: background 0.2s var(--ease);
+}
+.sizes-table tbody tr:hover {
+  background: var(--cream);
+}
+.sizes-table tbody th {
+  font-weight: 600;
+  color: var(--ink);
+}
+.sizes-table tbody td {
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+.sizes-table tbody tr:last-child th,
+.sizes-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.sizes-table .unit {
+  font-size: 0.82em;
+  color: var(--ink-muted);
+  opacity: 0.7;
+}
+.price-col {
+  text-align: right !important;
+}
+.sizes-table .price {
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-size: 1.05rem;
+}
+.sizes-note {
+  margin-top: auto;
+  padding: 1rem 1.15rem 1.15rem;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+}
+
+.sizes-drawing {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.3s var(--ease);
+}
+.sizes-drawing:hover {
+  box-shadow: var(--shadow-md);
+}
+.sizes-drawing .img-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--surface);
+}
+.sizes-drawing img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  transition: transform 0.4s var(--ease);
+}
+.sizes-drawing:hover img {
+  transform: scale(1.015);
+}
+.sizes-drawing figcaption {
+  padding: 0.9rem 1.15rem;
+  text-align: center;
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+}
+.drawing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+.drawing-link::before {
+  content: "↓";
+  font-size: 1rem;
+}
+.drawing-link:hover,
+.drawing-link:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Bike stores section */
+.bike-panel {
+  margin-top: 4rem;
+}
+.bike-intro {
+  margin-bottom: 2.25rem;
+  font-size: 1.075rem;
+}
+.bike-intro p:last-child {
+  margin-bottom: 0;
+}
+.bike-note {
+  padding: 1.25rem 1.15rem 1.35rem;
+}
+.note-fine {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  opacity: 0.85;
+}
+</style>
