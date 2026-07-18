@@ -31,18 +31,29 @@ const faqs = [
   description="Bespoke joinery and woodwork crafted for Cumbrian homes since 1988. Kitchens, bedrooms, conservatories, garages and more. Call 01228 512303."
 >
     <!-- HERO -->
-    <section class="page-hero py-12 text-center lg:py-20">
-      <div class="container py-12" data-reveal>
-        <span class="hero-eyebrow">Est. 1988 · Carlisle, Cumbria</span>
-        <h1 class="display-4 mx-auto mb-6 font-bold" style="max-width: 14ch">
-          Bespoke Joinery, Handmade in Cumbria Since 1988
+    <section class="home-hero">
+      <img
+        class="home-hero-bg"
+        src="/images/home-hero.jpeg"
+        alt="Oak framed gazebo handmade by Woodstyle Joinery, fitted to a sandstone house in Cumbria"
+        width="1680"
+        height="1260"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="home-hero-scrim" aria-hidden="true"></div>
+      <div class="container home-hero-content" data-reveal>
+        <p class="home-hero-kicker">Est. 1988 &middot; Wood Bank Farm, Carlisle</p>
+        <h1 class="home-hero-heading">
+          Bespoke joinery, <em>handmade</em> in Cumbria
         </h1>
-        <p class="lead mx-auto mb-6" style="max-width: 640px">
+        <p class="lead home-hero-lead">
           Honest, handmade joinery for homes and gardens right across Cumbria. Built around you, and built to last.
         </p>
-        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+        <div class="home-hero-actions">
           <a href="contact" class="btn btn-light btn-lg px-6 font-bold">Get a Quote</a>
-          <a href="products" class="btn btn-outline-custom btn-lg px-6 font-bold">View Our Work</a>
+          <a href="tel:01228512303" class="home-hero-tel">or call <strong>01228 512303</strong></a>
         </div>
       </div>
     </section>
@@ -53,7 +64,7 @@ const faqs = [
         <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div data-reveal>
             <span class="section-kicker">Since 1988</span>
-            <h2 class="mb-6 font-bold text-primary-custom heading-accent">Our Woodwork Story</h2>
+            <h2 class="mb-6 font-bold text-primary-custom heading-accent">From Our Workshop at Wood Bank Farm</h2>
             <p class="text-xl">
               We set up in 1988 and have been making joinery for homes
               across Cumbria, and well beyond, ever since.
@@ -172,7 +183,7 @@ const faqs = [
     <!-- CTA -->
     <section class="section bg-primary-custom text-center text-white">
       <div class="container" data-reveal>
-        <span class="hero-eyebrow">Free Quote, No Pressure</span>
+        <span class="cta-kicker">Free Quote, No Pressure</span>
         <h2 class="mb-4 mt-2 font-bold" style="color: rgba(255,255,255,0.85)">Thinking About a Project?</h2>
         <p class="lead mx-auto mb-6" style="max-width: 540px; color: rgba(255,255,255,0.85)">
           Give us a call or drop us a line and we'll sort you out with a free quote.
@@ -191,6 +202,99 @@ const faqs = [
     <FAQ items={faqs} uid="home-faq" />
 
     <style>
+      /* ── Hero ─────────────────────────────────────────── */
+      .home-hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: min(78vh, 680px);
+        padding-block: clamp(4rem, 9vw, 7rem);
+        overflow: hidden;
+      }
+      .home-hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 70% 55%;
+      }
+      .home-hero-scrim {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(100deg, rgba(31, 39, 32, 0.92) 0%, rgba(31, 39, 32, 0.74) 38%, rgba(31, 39, 32, 0.34) 70%, rgba(31, 39, 32, 0.14) 100%),
+          linear-gradient(to top, rgba(31, 39, 32, 0.45) 0%, transparent 30%);
+      }
+      @media (max-width: 640px) {
+        .home-hero-scrim {
+          background:
+            linear-gradient(to bottom, rgba(31, 39, 32, 0.72) 0%, rgba(31, 39, 32, 0.48) 55%, rgba(31, 39, 32, 0.62) 100%);
+        }
+      }
+      .home-hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .home-hero-kicker {
+        margin: 0 0 1.1rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent-soft);
+      }
+      .home-hero-heading {
+        font-size: clamp(2.5rem, 5vw, 3.9rem);
+        font-weight: 600;
+        max-width: 15ch;
+        margin-bottom: 1.35rem;
+        color: #fff;
+        text-wrap: balance;
+      }
+      .home-hero-heading em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--accent-soft);
+      }
+      .home-hero-lead {
+        max-width: 44ch;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .home-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .home-hero-tel {
+        color: rgba(255, 255, 255, 0.88);
+        text-decoration: none;
+        font-size: 1.02rem;
+        white-space: nowrap;
+      }
+      .home-hero-tel strong {
+        color: #fff;
+        text-decoration: underline;
+        text-decoration-color: var(--accent-soft);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.22em;
+      }
+      .home-hero-tel:hover strong { color: var(--accent-soft); }
+
+      /* CTA band kicker (replaces the pill badge) */
+      .cta-kicker {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--accent-soft);
+      }
+
       /* Editorial featured-products layout */
       .featured-grid {
         display: grid;
