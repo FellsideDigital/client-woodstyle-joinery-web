@@ -435,11 +435,15 @@ const count = images.length;
     spaceBetween: 8,
     freeMode: { enabled: true },
     watchSlidesProgress: true,
+    grabCursor: true,
+    mousewheel: { forceToAxis: true },
   });
 
   var mainSwiper = new Swiper('.ig-swiper', {
     loop: slideData.length > 1,
     speed: 420,
+    grabCursor: true,
+    mousewheel: { forceToAxis: true, thresholdDelta: 6 },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -455,6 +459,15 @@ const count = images.length;
 
   /* ── Lightbox ────────────────────────────────────── */
   var lb      = document.getElementById('ig-lightbox');
+
+  /* Move the lightbox to <body> so its position:fixed is anchored to the
+     viewport. Ancestors with `will-change: transform` (e.g. the scroll-reveal
+     wrapper) otherwise become its containing block, trapping the overlay
+     inside the gallery instead of covering the screen. */
+  if (lb && lb.parentNode !== document.body) {
+    document.body.appendChild(lb);
+  }
+
   var lbImg   = lb.querySelector('.ig-lb-img');
   var lbCap   = lb.querySelector('.ig-lb-caption');
   var lbCnt   = lb.querySelector('.ig-lb-counter');
@@ -463,6 +476,18 @@ const count = images.length;
   var lbNext  = lb.querySelector('.ig-lb-next');
   var lbBack  = lb.querySelector('.ig-lb-backdrop');
   var lbIndex = 0;
+
+  /* Lock page scroll without the horizontal jump caused by the vanishing
+     scrollbar on desktop. */
+  function lockScroll() {
+    var sbw = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    if (sbw > 0) document.body.style.paddingRight = sbw + 'px';
+  }
+  function unlockScroll() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
 
   function showLightbox(index) {
     lbIndex = ((index % slideData.length) + slideData.length) % slideData.length;
@@ -474,7 +499,7 @@ const count = images.length;
     lb.removeAttribute('hidden');
     lb.classList.remove('ig-lb-closing');
     lb.classList.add('ig-lb-visible');
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     lbClose.focus();
   }
 
@@ -483,7 +508,7 @@ const count = images.length;
     lb.addEventListener('animationend', function handler() {
       lb.setAttribute('hidden', '');
       lb.classList.remove('ig-lb-visible', 'ig-lb-closing');
-      document.body.style.overflow = '';
+      unlockScroll();
       lb.removeEventListener('animationend', handler);
     }, { once: true });
   }
