@@ -75,7 +75,7 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
         <form
           id="contact-form"
           class="contact-form"
-          action="https://formspree.io/f/mykregzz"
+          action="/api/contact"
           method="POST"
         >
           <span class="section-kicker">Free Quote</span>
@@ -83,7 +83,6 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 
           <!-- Spam honeypot: leave blank -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
-          <input type="hidden" name="_subject" value="New enquiry from the Woodstyle Joinery website" />
 
           <div id="form-error" class="form-error" role="alert">
             <i data-feather="alert-triangle" aria-hidden="true"></i>
