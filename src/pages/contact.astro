@@ -83,6 +83,8 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
 
           <!-- Spam honeypot: leave blank -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+          <!-- Records page-load time; used server-side to reject implausibly fast (bot) submissions -->
+          <input type="hidden" name="_ts" id="ts-field" />
 
           <div id="form-error" class="form-error" role="alert">
             <i data-feather="alert-triangle" aria-hidden="true"></i>
@@ -341,10 +343,17 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
   const successEl = document.getElementById('form-success');
   const errorEl = document.getElementById('form-error');
   const resetBtn = document.getElementById('form-reset');
+  const tsField = document.getElementById('ts-field') as HTMLInputElement | null;
+
+  // Stamp page-load time as soon as this script runs (close to real load time
+  // for a human visitor); the server checks how long ago this was on submit.
+  if (tsField) tsField.value = String(Date.now());
 
   if (form && successEl && errorEl) {
     const submitBtn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
     const defaultLabel = submitBtn?.innerHTML ?? 'Send message';
+    const errorMessageEl = errorEl.querySelector('span');
+    const defaultErrorMessage = errorMessageEl?.textContent ?? '';
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -374,8 +383,13 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
       }
 
       if (!response.ok) {
-        // Server rejected the submission (validation, spam, or send failure).
+        // Server rejected the submission (validation, rate limit, or send failure).
         console.error('[contact] server responded with', response.status);
+        if (errorMessageEl) {
+          errorMessageEl.textContent = response.status === 429
+            ? "You've sent a few messages in a row — please wait a few minutes and try again, or call us on 01228 512303."
+            : defaultErrorMessage;
+        }
         errorEl.classList.add('is-active');
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -399,6 +413,8 @@ const description = "Get in touch with Woodstyle Joinery for a free quote on bes
     // "Send another message": bring the empty form back
     resetBtn?.addEventListener('click', () => {
       form.reset();
+      if (tsField) tsField.value = String(Date.now());
+      if (errorMessageEl) errorMessageEl.textContent = defaultErrorMessage;
       successEl.classList.remove('is-active');
       form.style.display = '';
       const submit = form.querySelector<HTMLButtonElement>('button[type="submit"]');
